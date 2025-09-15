@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Gatisaurios - Para Colorear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mango+AC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Estilos -->
+    <link href="styles.css?v=1.0.1" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+</head>
+
+<body>
+    <div class="bg-wrapper">
+        <img src="/img/GatisauriosFondo.svg" alt="Fondo Gatisaurios">
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Colorear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Juegos</a>
+                    </li>
+                    <li class="nav-item logo-item">
+                        <a class="navbar-brand" href="#">
+                            <img class="logo" src="/img/GatisauriosLogo.svg" alt="Gatisaurios Logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Membresías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-user"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero principal -->
+    <section class="hero">
+        <img src="/img/GatisauriosTitulo.svg" alt="Gatisaurios Título">
+        <a href="#" class="btn btn-cta">www.gatisaurios.com</a>
+    </section>
+
+
+    <!-- Sección de Anuncios -->
+    <section class="section bg-light">
+        <img src="/img/GatisauriosNovedades.svg" alt="Gatisaurios Novedades">
+
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Demo Colorear -->
+                <div class="col-md-6">
+                    <div class="card anuncio-card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">¡Colorea en línea!</h4>
+                            <p class="card-text">Explora el mundo de Gatisaurios coloreando tus personajes favoritos
+                                desde
+                                tu navegador.</p>
+                            <div class="demo-preview">
+                                <img src="/img/GatisauriosDemo.svg" alt="Demo Colorear" class="img-fluid mb-3">
+                            </div>
+                            <a href="/demo.html" class="btn btn-cta">
+                                <i class="fas fa-paint-brush"></i> Colorear ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Próximo Juego -->
+                <div class="col-md-6">
+                    <div class="card anuncio-card coming-soon h-100">
+                        <div class="card-body">
+                            <div class="coming-soon-content text-md-start text-center">
+                                <span class="badge bg-warning mb-3">¡Próximamente!</span>
+                                <h3 class="display-6 fw-bold">Juego de Gatisaurios</h3>
+                                <p class="lead mb-4">¡Prepárate para una aventura épica!</p>
+                                <div class="video-wrapper mb-4">
+                                    <iframe src="https://www.youtube.com/embed/U4b49FX0w6o" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="features-list mb-4">
+                                    <div class="feature-item">
+                                        <i class="fas fa-gamepad"></i> Múltiples niveles
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-star"></i> Colecciona personajes
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-trophy"></i> Desafíos diarios
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-bell me-2"></i> Notificarme
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección de Personajes Gatisaurios -->
+    <section class="section" id="personajes">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Conoce a los Gatisaurios</h2>
+            </div>
+
+            <!-- Carrusel en móvil -->
+            <div class="d-md-none owl-carousel owl-theme">
+                <!-- <div class="item"><img src="/img/personajes/michizzzaurio.svg" alt="MichiZZZaurio">
+                    <p class="mt-2 fw-bold">MichiZZZaurio</p>
+                </div> -->
+                <div class="item"><img src="/img/personajes/chefisaurio.svg" alt="Chefisaurio">
+                    <p class="mt-2 fw-bold">Chefisaurio</p>
+                </div>
+                <div class="item"><img src="/img/personajes/lectosaurio.svg" alt="Lectosaurio">
+                    <p class="mt-2 fw-bold">Lectosaurio</p>
+                </div>
+                <!-- <div class="item"><img src="/img/personajes/pintasaurio.svg" alt="Pintasaurio">
+                    <p class="mt-2 fw-bold">Pintasaurio</p>
+                </div> -->
+                <div class="item"><img src="/img/personajes/zensaurio.svg" alt="Zensaurio">
+                    <p class="mt-2 fw-bold">Zensaurio</p>
+                </div>
+                <div class="item"><img src="/img/personajes/burbujasaurio.svg" alt="Burbujasaurio">
+                    <p class="mt-2 fw-bold">Burbujasaurio</p>
+                </div>
+                <div class="item"><img src="/img/personajes/rodasaurio.svg" alt="Rodasaurio">
+                    <p class="mt-2 fw-bold">Rodasaurio</p>
+                </div>
+                <div class="item"><img src="/img/personajes/rockosaurio.svg" alt="Rockosaurio">
+                    <p class="mt-2 fw-bold">Rockosaurio</p>
+                </div>
+                <div class="item"><img src="/img/personajes/trapesaurio.svg" alt="Trapesaurio">
+                    <p class="mt-2 fw-bold">Trapesaurio</p>
+                </div>
+                <div class="item"><img src="/img/personajes/escobasaurio.svg" alt="Escobosaurio">
+                    <p class="mt-2 fw-bold">Escobosaurio</p>
+                </div>
+            </div>
+
+            <!-- Grid en escritorio -->
+            <div class="row g-4 d-none d-md-flex">
+                <!-- Personaje: MichiZZZaurio -->
+                <!-- <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/michizzzaurio.svg" class="card-img-top" alt="MichiZZZaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">MichiZZZaurio</h5>
+                            <p class="card-text">Sueña profundo, ronronea más fuerte.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Personaje: Chefisaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/chefisaurio.svg" class="card-img-top" alt="Chefisaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Chefisaurio</h5>
+                            <p class="card-text">Cocinar es como colorear con sabores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Lectosaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/lectosaurio.svg" class="card-img-top" alt="Lectosaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lectosaurio</h5>
+                            <p class="card-text">Leer abre tu imaginación.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Pintasaurio -->
+                <!-- <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/pintasaurio.svg" class="card-img-top" alt="Pintasaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pintasaurio</h5>
+                            <p class="card-text">Colorea el mundo con tus ideas.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Personaje: Zensaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/zensaurio.svg" class="card-img-top" alt="Zensaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Zensaurio</h5>
+                            <p class="card-text">Respira, y colorea tu paz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Burbujasaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/burbujasaurio.svg" class="card-img-top" alt="Burbujasaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Burbujasaurio</h5>
+                            <p class="card-text">¡El baño es una aventura!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Rodasaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/rodasaurio.svg" class="card-img-top" alt="Rodasaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rodasaurio</h5>
+                            <p class="card-text">Cada paseo es rugiente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Rockosaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/rockosaurio.svg" class="card-img-top" alt="Rockosaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rockosaurio</h5>
+                            <p class="card-text">¡Que ruja la guitarra!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Trapesaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/trapesaurio.svg" class="card-img-top" alt="Trapesaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Trapesaurio</h5>
+                            <p class="card-text">¡Dinoacrobacias en el aire!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaje: Escobosaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/personajes/escobasaurio.svg" class="card-img-top" alt="Escobosaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Escobosaurio</h5>
+                            <p class="card-text">¡Listo para volar en su escoba mágica!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Sección de Tienda Gatisaurios -->
+    <section class="section bg-light" id="tienda">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Tienda Oficial Gatisaurios</h2>
+            </div>
+            <div class="row g-4">
+
+                <!-- Producto: Peluche MichiZZZaurio -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/tienda/peluche.png" class="card-img-top" alt="Peluche MichiZZZaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Peluche Lectosaurio</h5>
+                            <p class="card-text">Suave, tierno y abrazable. ¡Tu compañero para leer!</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto: Libro para Colorear -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/GatisauriosLibro.svg" class="card-img-top" alt="Libro para Colorear Gatisaurios">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Libro para Colorear</h5>
+                            <p class="card-text">¡32 dibujos de diversión Gatisauria listas para llenarse de color!</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto: Combo Especial -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/tienda/combo.png" class="card-img-top" alt="Combo Gatisaurios">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Combo Especial</h5>
+                            <p class="card-text">Incluye peluche + libro + acceso a zona premium en línea.</p>
+                            <a href="#" class="btn btn-success">¡Lo quiero!</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Sección de Cuentos Gatisaurios -->
+    <section class="section bg-light" id="cuentos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Cuentos Gatisaurios</h2>
+                <p class="lead">Historias mágicas protagonizadas por tus Gatisaurios favoritos</p>
+            </div>
+            <div class="row g-4">
+
+                <!-- Cuento 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/cuentos/cuentos.svg" class="card-img-top" alt="Cuento MichiZZZaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">El Sueño de MichiZZZaurio</h5>
+                            <p class="card-text">Un viaje entre nubes y ronquidos.</p>
+                            <a href="#" class="btn btn-outline-primary">Leer Cuento</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuento 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/cuentos/cuentos.svg" class="card-img-top" alt="Cuento Chefisaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Chefisaurio y el Pastel Perdido</h5>
+                            <p class="card-text">Una receta llena de risas y sorpresas.</p>
+                            <a href="#" class="btn btn-outline-primary">Escuhar Cuento</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuento 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/img/cuentos/cuentos.svg" class="card-img-top" alt="Cuento Lectosaurio">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lectosaurio y el Bosque de Libros</h5>
+                            <p class="card-text">Un mundo donde las páginas cobran vida.</p>
+                            <a href="#" class="btn btn-outline-primary">video cuento</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Registro -->
+    <section class="section registro-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="registro-content">
+                        <img src="/img/GatisauriosUnete.svg" alt="Gatisaurios Unete">
+                        <p class="lead">Crea tu cuenta y descubre un mundo lleno de diversión con los Gatisaurios</p>
+                        <ul class="beneficios-lista">
+                            <li><i class="fas fa-star"></i> Acceso a dibujos exclusivos</li>
+                            <li><i class="fas fa-gamepad"></i> Juegos interactivos</li>
+                            <li><i class="fas fa-palette"></i> Colorea en línea</li>
+                            <li><i class="fas fa-download"></i> Descarga tus creaciones</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="registro-form-container">
+                        <form class="registro-form">
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nombre de usuario" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class "fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-cta w-100">
+                                <i class="fas fa-paw me-2"></i>Crear mi cuenta
+                            </button>
+                            <p class="mt-3 text-center">¿Ya tienes cuenta? <a href="#login">Inicia sesión</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Membresías -->
+    <section class="section-membresias py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <img src="/img/GatisauriosPlanes.svg" alt="Gatisaurios Planes" class="img-fluid">
+            </div>
+            <div class="row">
+                <!-- Plan Básico -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3>Plan Básico</h3>
+                            <h4 class="price">$5/mes</h4>
+                            <ul class="list-unstyled">
+                                <li>✓ 10 dibujos para colorear</li>
+                                <li>✓ 2 juegos básicos</li>
+                                <li>✓ Colorear online</li>
+                            </ul>
+                            <button class="btn btn-primary">Elegir Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Premium -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body text-center">
+                            <h3>Plan Premium</h3>
+                            <h4 class="price">$10/mes</h4>
+                            <ul class="list-unstyled">
+                                <li>✓ Dibujos ilimitados</li>
+                                <li>✓ Todos los juegos</li>
+                                <li>✓ Descarga PDF</li>
+                                <li>✓ Sin anuncios</li>
+                            </ul>
+                            <button class="btn btn-primary">Elegir Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Familiar -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3>Plan Familiar</h3>
+                            <h4 class="price">$15/mes</h4>
+                            <ul class="list-unstyled">
+                                <li>✓ Todo lo del Premium</li>
+                                <li>✓ Hasta 3 perfiles</li>
+                                <li>✓ Control parental</li>
+                                <li>✓ Soporte prioritario</li>
+                            </ul>
+                            <button class="btn btn-primary">Elegir Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Redes Sociales -->
+    <section class="social-section">
+        <div class="container">
+            <h3 class="section-title">Síguenos en redes sociales</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-icon x-twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form">
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" placeholder="Contraseña" required>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-cta">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <nav class="footer-nav">
+                        <a href="#">Aviso de Privacidad</a>
+                        <a href="#">Términos y Condiciones</a>
+                        <a href="#">Contacto</a>
+                    </nav>
+                </div>
+                <div class="col-12">
+                    <p>&copy; 2025 Gatisaurios. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                margin: 20,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+</body>
+
+
+</body>
+
+</html>

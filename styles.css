@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mango+AC&display=swap');
+
+:root {
+    --bg-color: #e3e2deb3;
+    --verde: #4CAF50;
+    --marron: #8F6228;
+    --naranja: #FF5722;
+    --gris-claro: #f5f5f5;
+    --morado: #9747FF;
+    --narajafuerte: #FF8C00;
+    /* Agregamos el color naranja fuerte */
+    /* Agregamos el color morado que faltaba */
+}
+
+/* Base styles */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    background: var(--bg-color) url('/img/GatisauriosFondo.svg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background wrapper */
+.bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* Responsive images */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Section spacing */
+.section {
+    background-color: var(--gris-claro);
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.section-title {
+    color: var(--marron);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--marron);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--marron);
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: var(--verde);
+}
+
+.navbar-nav {
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--verde);
+    font-size: 2.8rem;
+    text-shadow: 2px 2px white;
+    font-weight: 700;
+}
+
+.hero h2 {
+    color: var(--marron);
+    font-size: 1.4rem;
+    margin-top: -10px;
+}
+
+.btn-cta {
+    background-color: #FF5722;
+    /* Naranja fuerte */
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #F4511E;
+    /* Un tono más oscuro de naranja */
+    color: white;
+    transform: scale(1.05);
+}
+
+.anuncio {
+    background-color: var(--naranja);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.registro {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h1,
+h2,
+.navbar-brand {
+    font-family: 'Mango AC', cursive;
+}
+
+.btn-primary {
+    background-color: var(--verde);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--morado);
+    transform: scale(1.05);
+}
+
+.anuncio-card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.anuncio-card:hover {
+    transform: translateY(-5px);
+}
+
+.anuncio-card .card-title {
+    color: #FF5722;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.anuncio-card img {
+    border-radius: 10px;
+}
+
+.coming-soon {
+    background: #ffffff;
+    color: #333;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.coming-soon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/img/pattern.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.coming-soon .card-body {
+    padding: 3rem;
+}
+
+.coming-soon .badge {
+    background: var(--naranja);
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.coming-soon .display-6 {
+    color: var(--verde);
+    margin: 1rem 0;
+}
+
+.features-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-item i {
+    color: var(--naranja);
+    margin-right: 10px;
+}
+
+.notify-btn {
+    background: var(--naranja);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.notify-btn:hover {
+    background: var(--verde);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-preview-wrapper {
+    position: relative;
+    padding: 1rem;
+}
+
+.game-preview-wrapper img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.game-preview-wrapper:hover img {
+    transform: translateY(-5px);
+}
+
+.floating-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--verde);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon .card-title {
+    color: white;
+}
+
+.coming-soon-content {
+    padding: 2rem;
+}
+
+.coming-soon .btn-outline-primary {
+    color: white;
+    border-color: white;
+    background: transparent;
+}
+
+.coming-soon .btn-outline-primary:hover {
+    background: white;
+    color: #FF5722;
+}
+
+.demo-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.demo-preview img {
+    transition: transform 0.3s ease;
+}
+
+.demo-preview:hover img {
+    transform: scale(1.05);
+}
+
+.registro-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #fff8f4 0%, #fff 100%);
+}
+
+.registro-content {
+    padding-right: 2rem;
+}
+
+.registro-content .lead {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.beneficios-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.beneficios-lista li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.beneficios-lista i {
+    color: #FF5722;
+    margin-right: 10px;
+}
+
+.registro-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.registro-form .input-group-text {
+    background: transparent;
+    border-right: none;
+    color: #FF5722;
+}
+
+.registro-form .form-control {
+    border-left: none;
+    padding-left: 0;
+}
+
+.registro-form .form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.registro-form .input-group:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(255, 87, 34, 0.25);
+    border-radius: 0.375rem;
+}
+
+.registro-form a {
+    color: #FF5722;
+    text-decoration: none;
+}
+
+.registro-form a:hover {
+    text-decoration: underline;
+}
+
+.btn-cta {
+    background: #FF5722;
+    color: white;
+    padding: 0.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #F4511E;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.social-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--gris-claro) 0%, white 100%);
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.instagram {
+    background: #e4405f;
+}
+
+.youtube {
+    background: #ff0000;
+}
+
+.tiktok {
+    background: #000000;
+}
+
+.x-twitter {
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.x-twitter:hover {
+    background-color: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.x-twitter i {
+    font-size: 1.5rem;
+}
+
+.footer {
+    background-color: var(--verde);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Efectos hover adicionales para los iconos sociales */
+.social-icon.facebook:hover {
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.5);
+}
+
+.social-icon.instagram:hover {
+    box-shadow: 0 0 15px rgba(228, 64, 95, 0.5);
+}
+
+.social-icon.youtube:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.social-icon.tiktok:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.social-icon.twitter:hover,
+.social-icon.x-twitter:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.hero img,
+section img[src*="GatisauriosPlanes"],
+section img[src*="GatisauriosTitulo"] {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* SVG images responsive handling */
+img[src$=".svg"] {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-btn {
+    background: var(--narajafuerte);
+    color: white !important;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem !important;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--verde);
+    transform: translateY(-2px);
+}
+
+/* Logo styles - Add this after the navbar styles */
+.logo {
+    width: 120px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+/* Keep the existing mobile styles */
+@media (max-width: 768px) {
+
+    .hero img,
+    section img[src*="GatisauriosPlanes"],
+    section img[src*="GatisauriosTitulo"] {
+        width: 90%;
+    }
+
+    .section-membresias {
+        padding: 2rem 0;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .login-btn {
+        margin: 1rem 0;
+    }
+
+    .video-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    body {
+        background: var(--bg-color);
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .hero img {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .video-wrapper {
+        margin: 1rem 0;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .video-wrapper {
+        margin: 1rem 0;
+    }
+
+    .bg-wrapper img {
+        transform: scale(1.2);
+        transform-origin: center center;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        width: 80px;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .card {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tool-btn.active {
+    background: var(--naranja);
+    color: white;
+}
