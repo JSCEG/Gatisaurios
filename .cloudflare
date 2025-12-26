@@ -1,0 +1,12 @@
+# Cloudflare Pages Configuration
+# https://developers.cloudflare.com/pages/
+
+# Build settings
+BUILD_COMMAND = "npm run build"
+BUILD_OUTPUT_DIRECTORY = "dist"
+NODE_VERSION = "18"
+
+# Environment variables
+# Add these in Cloudflare Pages dashboard:
+# VITE_SUPABASE_URL
+# VITE_SUPABASE_ANON_KEY
