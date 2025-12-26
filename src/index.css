@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
-/* Alternativa a Mango AC más estable */
 
 @tailwind base;
 @tailwind components;
@@ -28,14 +27,14 @@
   /* Títulos Mango Style */
   .text-mango-title {
     font-family: "Titan One", cursive;
-    /* Visualmente muy similar a Mango AC */
     color: white;
     text-shadow:
-      3px 3px 0px #8F6228,
-      -1px -1px 0 #8F6228,
-      1px -1px 0 #8F6228,
-      -1px 1px 0 #8F6228,
-      1px 1px 0 #8F6228;
+      3px 3px 0px #4a4a4a,
+      /* Sombra principal gris oscuro */
+      -1px -1px 0 #4a4a4a,
+      1px -1px 0 #4a4a4a,
+      -1px 1px 0 #4a4a4a,
+      1px 1px 0 #4a4a4a;
     @apply text-5xl md:text-6xl tracking-wider drop-shadow-xl;
   }
 

@@ -82,7 +82,7 @@ export function HomePage() {
       {/* Characters Gallery Section */}
       <section className="py-24 px-0 relative">
         <div className="container mx-auto px-4 mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <h2 className="text-6xl text-center md:text-left text-gati-marron drop-shadow-md">
+          <h2 className="text-mango-title text-center md:text-left">
             Conoce a la Manada
           </h2>
           <div className="hidden md:flex gap-2 text-gati-marron/60 font-barlow text-lg animate-pulse">
@@ -118,6 +118,138 @@ export function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Book Promo Section */}
+      <section className="py-24 px-4 bg-gati-verde/10 relative overflow-hidden">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-block px-4 py-1 bg-gati-verde text-white rounded-full text-sm font-bold tracking-wider mb-6 uppercase animate-bounce">
+              ¡Exclusivo!
+            </div>
+            <h2 className="text-mango-title text-gati-marron mb-6">
+              El Libro Mágico
+            </h2>
+            <p className="text-2xl text-gati-marron font-barlow mb-8 leading-relaxed">
+              Descubre las historias originales de los Gatisaurios. Incluye un <strong className="text-gati-verde">Código QR Mágico</strong> que desbloquea sorpresas y juegos exclusivos en la app.
+            </p>
+            <ul className="text-left max-w-md mx-auto md:mx-0 mb-10 space-y-4 text-lg font-barlow text-gati-marron/80">
+              <li className="flex items-center gap-3">
+                <span className="bg-gati-verde text-white rounded-full p-1">✓</span> 50 Páginas de aventuras a color
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-gati-verde text-white rounded-full p-1">✓</span> Stickers de regalo
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-gati-verde text-white rounded-full p-1">✓</span> Acceso a contenido secreto
+              </li>
+            </ul>
+            <Link to="/tienda" className="btn-secondary text-2xl px-10 py-4 shadow-xl hover:shadow-2xl">
+              ¡Lo Quiero!
+            </Link>
+          </div>
+
+          <div className="flex-1 relative flex justify-center">
+            <div className="absolute inset-0 bg-gati-verde/20 rounded-full blur-3xl transform scale-90" />
+            <img
+              src="/img/GatisauriosLibro.png"
+              alt="Libro Gatisaurios con QR"
+              className="relative z-10 max-w-sm md:max-w-md w-full transform hover:scale-105 transition-transform duration-500 drop-shadow-2xl -rotate-3 hover:rotate-0"
+            />
+          </div>
+
+        </div>
+      </section>
+
+      {/* Subscription Plans Section */}
+      <section className="py-24 px-4 relative">
+        <div className="container mx-auto">
+          <h2 className="text-mango-title text-center mb-6">Planes de Aventura</h2>
+          <p className="text-2xl text-center text-gati-marron/80 font-barlow mb-16 max-w-2xl mx-auto">
+            Elige cómo quieres explorar el mundo Gatisaurio. ¡Cancela cuando quieras!
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Plan Explorador (Free) */}
+            <div className="card-glass p-8 flex flex-col relative overflow-hidden border-2 border-transparent hover:border-gati-marron/10">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl text-gati-marron font-chewy mb-2">Explorador</h3>
+                <div className="text-4xl font-bold text-gati-marron mb-2 font-barlow">Gratis</div>
+                <p className="text-gati-marron/60">Para empezar a descubrir</p>
+              </div>
+              <ul className="space-y-4 mb-8 flex-1">
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-verde">✔</span> 3 Cuentos básicos
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-verde">✔</span> 5 Dibujos para colorear
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-verde">✔</span> Acceso a la tienda
+                </li>
+              </ul>
+              <button className="w-full py-3 rounded-xl border-2 border-gati-marron/20 text-gati-marron font-chewy text-xl hover:bg-gati-marron/5 transition-colors">
+                Comenzar Gratis
+              </button>
+            </div>
+
+            {/* Plan Aventurero (Monthly) - Featured */}
+            <div className="card-glass p-8 flex flex-col relative transform md:-translate-y-4 border-4 border-gati-naranja shadow-2xl">
+              <div className="absolute top-0 right-0 bg-gati-naranja text-white text-xs font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                Más Popular
+              </div>
+              <div className="text-center mb-8">
+                <h3 className="text-3xl text-gati-naranja font-chewy mb-2">Aventurero</h3>
+                <div className="text-5xl font-bold text-gati-marron mb-2 font-barlow">$99<span className="text-xl text-gati-marron/50 font-normal">/mes</span></div>
+                <p className="text-gati-marron/60">Diversión sin límites</p>
+              </div>
+              <ul className="space-y-4 mb-8 flex-1">
+                <li className="flex items-center gap-3 text-gati-marron">
+                  <span className="bg-gati-naranja text-white rounded-full p-0.5 w-5 h-5 flex items-center justify-center text-xs">✔</span> <strong>Todos</strong> los cuentos
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron">
+                  <span className="bg-gati-naranja text-white rounded-full p-0.5 w-5 h-5 flex items-center justify-center text-xs">✔</span> <strong>Galería completa</strong> de dibujos
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron">
+                  <span className="bg-gati-naranja text-white rounded-full p-0.5 w-5 h-5 flex items-center justify-center text-xs">✔</span> Sin anuncios
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron">
+                  <span className="bg-gati-naranja text-white rounded-full p-0.5 w-5 h-5 flex items-center justify-center text-xs">✔</span> Modo sin conexión
+                </li>
+              </ul>
+              <button className="btn-primary w-full py-4 text-xl shadow-gati-naranja/30">
+                Prueba 7 días Gratis
+              </button>
+            </div>
+
+            {/* Plan Legendario (Yearly) */}
+            <div className="card-glass p-8 flex flex-col relative overflow-hidden border-2 border-transparent hover:border-gati-morado/30">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl text-gati-morado font-chewy mb-2">Legendario</h3>
+                <div className="text-4xl font-bold text-gati-marron mb-2 font-barlow">$899<span className="text-xl text-gati-marron/50 font-normal">/año</span></div>
+                <p className="text-gati-verde font-bold text-sm bg-gati-verde/10 inline-block px-2 py-1 rounded-lg">¡Ahorras 25%!</p>
+              </div>
+              <ul className="space-y-4 mb-8 flex-1">
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-morado">✔</span> Todo lo de Aventurero
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-morado">✔</span> <strong>Stickers físicos</strong> de regalo
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-morado">✔</span> Diploma de Gatisaurio
+                </li>
+                <li className="flex items-center gap-3 text-gati-marron/80">
+                  <span className="text-gati-morado">✔</span> Acceso anticipado
+                </li>
+              </ul>
+              <button className="w-full py-3 rounded-xl border-2 border-gati-morado text-gati-morado font-chewy text-xl hover:bg-gati-morado hover:text-white transition-colors">
+                Elegir Anual
+              </button>
+            </div>
           </div>
         </div>
       </section>
