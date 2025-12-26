@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { LoginButton } from '../components/auth/LoginButton'
+import { MagicalMap } from '../components/home/MagicalMap'
 import { useAuth } from '../hooks/useAuth'
 
 export function HomePage() {
@@ -54,12 +55,12 @@ export function HomePage() {
       {/* Activities Section */}
       <section className="py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-white/30 backdrop-blur-sm -skew-y-2 transform origin-top-left scale-110" />
-        
+
         <div className="container mx-auto relative z-10">
           <h2 className="text-mango-title text-center mb-20">
             ¡Mucha Diversión!
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-10">
             {[
               { to: "/coloring", icon: "🎨", title: "Colorear", desc: "Elige tu Gatisaurio favorito y dale vida con tus colores.", color: "text-gati-verde" },
