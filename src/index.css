@@ -24,18 +24,22 @@
 
 @layer components {
 
-  /* Títulos Mango Style */
+  /* Títulos Mango Style - Refinado */
   .text-mango-title {
     font-family: "Titan One", cursive;
-    color: white;
+    color: #FFFFFF;
+    /* Blanco puro para máximo contraste */
+    /* Sombra sólida y borde nítido sin difuminado */
     text-shadow:
-      3px 3px 0px #4a4a4a,
-      /* Sombra principal gris oscuro */
-      -1px -1px 0 #4a4a4a,
-      1px -1px 0 #4a4a4a,
-      -1px 1px 0 #4a4a4a,
-      1px 1px 0 #4a4a4a;
-    @apply text-5xl md:text-6xl tracking-wider drop-shadow-xl;
+      2px 2px 0 #000000,
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000,
+      3px 3px 0 #000000;
+    /* Borde extra para grosor */
+    @apply text-5xl md:text-6xl tracking-wider;
+    /* Eliminamos drop-shadow-xl para evitar el difuminado "sucio" */
   }
 
   /* Botones Aventura Refinados */

@@ -130,7 +130,7 @@ export function HomePage() {
             <div className="inline-block px-4 py-1 bg-gati-verde text-white rounded-full text-sm font-bold tracking-wider mb-6 uppercase animate-bounce">
               ¡Exclusivo!
             </div>
-            <h2 className="text-mango-title text-gati-marron mb-6">
+            <h2 className="text-mango-title mb-6">
               El Libro Mágico
             </h2>
             <p className="text-2xl text-gati-marron font-barlow mb-8 leading-relaxed">
@@ -147,9 +147,14 @@ export function HomePage() {
                 <span className="bg-gati-verde text-white rounded-full p-1">✓</span> Acceso a contenido secreto
               </li>
             </ul>
-            <Link to="/tienda" className="btn-secondary text-2xl px-10 py-4 shadow-xl hover:shadow-2xl">
-              ¡Lo Quiero!
-            </Link>
+            <a
+              href="https://www.amazon.com.mx/Gatisaurios-Gatitos-disfrazados-dinosaurios-colorear/dp/B0F3NB12WQ/ref=sr_1_5?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-2xl px-10 py-4 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+            >
+              <span>🛒</span> Comprar en Amazon
+            </a>
           </div>
 
           <div className="flex-1 relative flex justify-center">
