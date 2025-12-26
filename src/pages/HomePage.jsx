@@ -83,6 +83,42 @@ export function HomePage() {
       {/* Magical Map Section */}
       <MagicalMap />
 
+      {/* Video Promo Section */}
+      <section className="py-24 px-4 relative overflow-hidden bg-gati-amarillo/10">
+        <div className="container mx-auto text-center relative z-10">
+          <div className="inline-block px-4 py-1 bg-gati-naranja text-white rounded-full text-sm font-bold tracking-wider mb-6 uppercase animate-pulse">
+            ¡Trailer Oficial!
+          </div>
+          <h2 className="text-mango-title mb-12">
+            ¡Mira la Magia en Acción!
+          </h2>
+
+          <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white/80 transform hover:scale-[1.01] transition-transform duration-500 relative group">
+            <div className="absolute inset-0 bg-gati-naranja/20 group-hover:bg-transparent transition-colors pointer-events-none z-10" />
+            <div className="relative pt-[56.25%] bg-black w-full">
+              <iframe
+                src="https://www.youtube.com/embed/U4b49FX0w6o"
+                title="Trailer Gatisaurios"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p className="text-2xl text-gati-marron font-barlow mt-10 max-w-3xl mx-auto leading-relaxed">
+            Descubre cómo los Gatisaurios cobran vida en este video especial. <br />
+            <span className="text-gati-naranja font-bold">¡Prepárate para rugir y maullar de emoción!</span>
+          </p>
+        </div>
+
+        {/* Background Decor */}
+        <div className="absolute top-20 left-10 text-8xl animate-float opacity-50">🎬</div>
+        <div className="absolute bottom-20 right-10 text-8xl animate-float-delayed opacity-50">🍿</div>
+        <div className="absolute top-1/2 right-[10%] w-64 h-64 bg-gati-naranja/20 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-[10%] w-80 h-80 bg-gati-amarillo/20 rounded-full blur-3xl -z-10" />
+      </section>
+
       {/* Characters Gallery Section */}
       <section className="py-24 px-0 relative">
         <div className="container mx-auto px-4 mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
