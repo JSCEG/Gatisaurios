@@ -300,7 +300,7 @@ export function HomePage() {
       </section>
 
       {/* Store Teaser / Banner */}
-      <section className="py-24 px-4 relative overflow-hidden mt-12">
+      <section className="py-24 px-4 relative overflow-hidden mt-12 mb-24 md:mb-32">
         {/* Banner Background with modern gradient and shape */}
         <div className="absolute inset-0 bg-gradient-to-r from-gati-naranja via-orange-400 to-gati-amarillo rounded-[3rem] transform -rotate-1 mx-4 md:mx-12 shadow-2xl" />
 
