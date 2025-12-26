@@ -240,6 +240,24 @@ export function GamesPage() {
                 </div>
             )}
 
+            {/* Runner Game */}
+            {gameState === 'runner_game' && (
+                <RunnerGame 
+                    onWin={() => setGameState('victory')} 
+                    onLose={() => {
+                        setLives(l => l - 1)
+                        if (lives <= 1) { // Will be 0 after update
+                             setGameState('game_over')
+                        } else {
+                             alert("¡Cuidado! Perdiste una vida. Inténtalo de nuevo.")
+                             // Restart runner game logic implicitly by re-rendering component
+                             // To force reset, we might need a key or explicit reset, 
+                             // but for now re-mounting should work if state is local to component
+                        }
+                    }} 
+                />
+            )}
+
             {/* Game Over */}
             {gameState === 'game_over' && (
                 <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-white p-8 text-center">
