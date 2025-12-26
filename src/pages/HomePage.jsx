@@ -56,7 +56,7 @@ export function HomePage() {
         <div className="absolute inset-0 bg-white/30 backdrop-blur-sm -skew-y-2 transform origin-top-left scale-110" />
 
         <div className="container mx-auto relative z-10">
-          <h2 className="text-6xl text-center text-gati-marron mb-20 drop-shadow-md">
+          <h2 className="text-mango-title text-center mb-20">
             ¡Mucha Diversión!
           </h2>
 

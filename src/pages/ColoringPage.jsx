@@ -31,7 +31,7 @@ export function ColoringPage() {
         {/* Header */}
         <div className="bg-gradient-to-b from-gati-verde/20 to-transparent pt-20 pb-10 px-4">
           <div className="container mx-auto text-center">
-            <h1 className="text-6xl text-gati-marron mb-6 drop-shadow-sm text-shadow">¡A Colorear!</h1>
+            <h1 className="text-mango-title mb-6">¡A Colorear!</h1>
             <p className="text-xl text-gati-marron/80 max-w-2xl mx-auto font-barlow">
               Elige tu dibujo favorito, imprímelo o coloréalo en línea. ¡Deja volar tu imaginación!
             </p>

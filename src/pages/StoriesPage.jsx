@@ -54,7 +54,7 @@ export function StoriesPage() {
       {/* Hero Header */}
       <div className="bg-gradient-to-b from-gati-cielo/20 to-transparent pt-20 pb-10 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-6xl text-gati-marron mb-6 drop-shadow-sm text-shadow">Cuentos Mágicos</h1>
+          <h1 className="text-mango-title mb-6">Cuentos Mágicos</h1>
           <p className="text-xl text-gati-marron/80 max-w-2xl mx-auto font-barlow">
             Historias increíbles para escuchar, soñar y aprender. ¡Elige tu favorita!
           </p>
