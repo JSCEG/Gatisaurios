@@ -16,28 +16,32 @@
   h4,
   h5,
   h6 {
-    @apply font-chewy tracking-wide;
+    font-family: "Chewy", cursive;
+    @apply tracking-wide;
   }
 }
 
 @layer components {
   /* Botones Aventura */
   .btn-primary {
-    @apply bg-gati-naranja text-white font-chewy text-xl px-8 py-3 rounded-full 
+    font-family: "Chewy", cursive;
+    @apply bg-gati-naranja text-white text-xl px-8 py-3 rounded-full 
            shadow-lg transform transition-all duration-300 
            hover:bg-orange-600 hover:scale-105 hover:rotate-1
            active:scale-95 active:shadow-sm;
   }
   
   .btn-secondary {
-    @apply bg-gati-verde text-white font-chewy text-xl px-8 py-3 rounded-full 
+    font-family: "Chewy", cursive;
+    @apply bg-gati-verde text-white text-xl px-8 py-3 rounded-full 
            shadow-lg transform transition-all duration-300 
            hover:bg-green-600 hover:scale-105 hover:-rotate-1
            active:scale-95 active:shadow-sm;
   }
 
   .btn-accent {
-    @apply bg-gati-amarillo text-gati-marron font-chewy text-xl px-8 py-3 rounded-full 
+    font-family: "Chewy", cursive;
+    @apply bg-gati-amarillo text-gati-marron text-xl px-8 py-3 rounded-full 
            shadow-lg transform transition-all duration-300 
            hover:bg-yellow-400 hover:scale-105 hover:rotate-1
            active:scale-95 active:shadow-sm;

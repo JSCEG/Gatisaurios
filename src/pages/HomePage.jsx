@@ -6,17 +6,17 @@ export function HomePage() {
   const { user } = useAuth()
 
   const characters = [
-    { name: 'Burbujasaurio', img: '/img/galeria/Burbujasaurio.png', desc: '¡Le encantan las burbujas mágicas!', color: 'text-gati-cielo' },
-    { name: 'Chefisaurio', img: '/img/galeria/Chefisaurio.png', desc: 'Cocina las galletas más ricas.', color: 'text-gati-naranja' },
-    { name: 'Escobasaurio', img: '/img/galeria/Escobasaurio.png', desc: 'Mantiene todo limpio y brillante.', color: 'text-gati-verde' },
-    { name: 'Lectosaurio', img: '/img/galeria/Lectosaurio.png', desc: 'Devora libros y cuenta historias.', color: 'text-gati-azul' },
+    { name: 'Burbujasaurio', img: '/img/personajes/burbujasaurio.svg', desc: '¡Le encantan las burbujas mágicas!', color: 'text-gati-cielo' },
+    { name: 'Chefisaurio', img: '/img/personajes/chefisaurio.svg', desc: 'Cocina las galletas más ricas.', color: 'text-gati-naranja' },
+    { name: 'Escobasaurio', img: '/img/personajes/escobasaurio.svg', desc: 'Mantiene todo limpio y brillante.', color: 'text-gati-verde' },
+    { name: 'Lectosaurio', img: '/img/personajes/lectosaurio.svg', desc: 'Devora libros y cuenta historias.', color: 'text-gati-azul' },
     { name: 'Magosaurio', img: '/img/galeria/Magosaurio.png', desc: '¡Hace trucos sorprendentes!', color: 'text-gati-morado' },
     { name: 'Michizzaurio', img: '/img/galeria/Michizzaurio.png', desc: 'El rey de las fiestas de pizza.', color: 'text-gati-amarillo' },
     { name: 'Pintasaurio', img: '/img/galeria/Pintasaurio.png', desc: 'Llena el mundo de colores.', color: 'text-gati-naranja' },
-    { name: 'Rockosaurio', img: '/img/galeria/Rockosaurio.png', desc: '¡Toca la guitarra todo el día!', color: 'text-gati-morado' },
-    { name: 'Rodasaurio', img: '/img/galeria/Rodasaurio.png', desc: 'El más veloz sobre ruedas.', color: 'text-gati-azul' },
-    { name: 'Trapesasaurio', img: '/img/galeria/Trapesasaurio.png', desc: 'Acrobacias son su pasión.', color: 'text-gati-verde' },
-    { name: 'Zensaurio', img: '/img/galeria/Zensaurio.png', desc: 'Paz y tranquilidad siempre.', color: 'text-gati-cielo' },
+    { name: 'Rockosaurio', img: '/img/personajes/rockosaurio.svg', desc: '¡Toca la guitarra todo el día!', color: 'text-gati-morado' },
+    { name: 'Rodasaurio', img: '/img/personajes/rodasaurio.svg', desc: 'El más veloz sobre ruedas.', color: 'text-gati-azul' },
+    { name: 'Trapesasaurio', img: '/img/personajes/trapesaurio.svg', desc: 'Acrobacias son su pasión.', color: 'text-gati-verde' },
+    { name: 'Zensaurio', img: '/img/personajes/zensaurio.svg', desc: 'Paz y tranquilidad siempre.', color: 'text-gati-cielo' },
   ]
 
   return (
