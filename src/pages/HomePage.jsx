@@ -6,43 +6,45 @@ export function HomePage() {
   const { user } = useAuth()
 
   const characters = [
-    { name: 'Burbujasaurio', img: '/img/galeria/Burbujasaurio.png', desc: '¡Le encantan las burbujas mágicas!' },
-    { name: 'Chefisaurio', img: '/img/galeria/Chefisaurio.png', desc: 'Cocina las galletas más ricas.' },
-    { name: 'Escobasaurio', img: '/img/galeria/Escobasaurio.png', desc: 'Mantiene todo limpio y brillante.' },
-    { name: 'Lectosaurio', img: '/img/galeria/Lectosaurio.png', desc: 'Devora libros y cuenta historias.' },
-    { name: 'Magosaurio', img: '/img/galeria/Magosaurio.png', desc: '¡Hace trucos sorprendentes!' },
-    { name: 'Michizzaurio', img: '/img/galeria/Michizzaurio.png', desc: 'El rey de las fiestas de pizza.' },
-    { name: 'Pintasaurio', img: '/img/galeria/Pintasaurio.png', desc: 'Llena el mundo de colores.' },
-    { name: 'Rockosaurio', img: '/img/galeria/Rockosaurio.png', desc: '¡Toca la guitarra todo el día!' },
-    { name: 'Rodasaurio', img: '/img/galeria/Rodasaurio.png', desc: 'El más veloz sobre ruedas.' },
-    { name: 'Trapesasaurio', img: '/img/galeria/Trapesasaurio.png', desc: 'Acrobacias son su pasión.' },
-    { name: 'Zensaurio', img: '/img/galeria/Zensaurio.png', desc: 'Paz y tranquilidad siempre.' },
+    { name: 'Burbujasaurio', img: '/img/galeria/Burbujasaurio.png', desc: '¡Le encantan las burbujas mágicas!', color: 'text-gati-cielo' },
+    { name: 'Chefisaurio', img: '/img/galeria/Chefisaurio.png', desc: 'Cocina las galletas más ricas.', color: 'text-gati-naranja' },
+    { name: 'Escobasaurio', img: '/img/galeria/Escobasaurio.png', desc: 'Mantiene todo limpio y brillante.', color: 'text-gati-verde' },
+    { name: 'Lectosaurio', img: '/img/galeria/Lectosaurio.png', desc: 'Devora libros y cuenta historias.', color: 'text-gati-azul' },
+    { name: 'Magosaurio', img: '/img/galeria/Magosaurio.png', desc: '¡Hace trucos sorprendentes!', color: 'text-gati-morado' },
+    { name: 'Michizzaurio', img: '/img/galeria/Michizzaurio.png', desc: 'El rey de las fiestas de pizza.', color: 'text-gati-amarillo' },
+    { name: 'Pintasaurio', img: '/img/galeria/Pintasaurio.png', desc: 'Llena el mundo de colores.', color: 'text-gati-naranja' },
+    { name: 'Rockosaurio', img: '/img/galeria/Rockosaurio.png', desc: '¡Toca la guitarra todo el día!', color: 'text-gati-morado' },
+    { name: 'Rodasaurio', img: '/img/galeria/Rodasaurio.png', desc: 'El más veloz sobre ruedas.', color: 'text-gati-azul' },
+    { name: 'Trapesasaurio', img: '/img/galeria/Trapesasaurio.png', desc: 'Acrobacias son su pasión.', color: 'text-gati-verde' },
+    { name: 'Zensaurio', img: '/img/galeria/Zensaurio.png', desc: 'Paz y tranquilidad siempre.', color: 'text-gati-cielo' },
   ]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col items-center justify-center p-4 overflow-hidden">
+      <section className="relative min-h-[85vh] flex flex-col items-center justify-center p-4 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gati-cielo/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gati-cielo/30 via-transparent to-gati-bg/50 pointer-events-none" />
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-gati-amarillo/20 rounded-full blur-3xl" />
+        <div className="absolute top-40 -right-20 w-72 h-72 bg-gati-morado/20 rounded-full blur-3xl" />
         
         <img 
           src="/img/GatisauriosTitulo.svg" 
           alt="Gatisaurios - Para Colorear" 
-          className="max-w-4xl w-full mx-auto mb-8 animate-float z-10"
+          className="max-w-4xl w-full mx-auto mb-8 animate-float z-10 drop-shadow-2xl filter"
         />
         
-        <div className="z-10 text-center">
-          <p className="text-2xl md:text-3xl text-gati-marron font-mango mb-8 max-w-2xl mx-auto">
+        <div className="z-10 text-center relative">
+          <p className="text-2xl md:text-4xl text-gati-marron font-chewy mb-10 max-w-3xl mx-auto drop-shadow-sm tracking-wide leading-relaxed">
             ¡Únete a la manada más divertida! Colorea, juega y vive grandes aventuras.
           </p>
           
           {user ? (
-            <Link to="/coloring" className="btn-primary inline-flex items-center gap-3 text-2xl px-10 py-4">
+            <Link to="/coloring" className="btn-primary inline-flex items-center gap-3 text-2xl px-12 py-5 transform hover:rotate-2 shadow-xl hover:shadow-2xl ring-4 ring-white/50">
               <span>🎨</span> ¡Vamos a Pintar!
             </Link>
           ) : (
-            <div className="scale-125">
+            <div className="scale-110 transform transition-transform hover:scale-115">
               <LoginButton />
             </div>
           )}
@@ -50,65 +52,70 @@ export function HomePage() {
       </section>
 
       {/* Activities Section */}
-      <section className="py-20 px-4 bg-white/40">
-        <div className="container mx-auto">
-          <h2 className="text-5xl text-center text-gati-marron mb-16">
+      <section className="py-24 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm -skew-y-2 transform origin-top-left scale-110" />
+        
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-6xl text-center text-gati-marron mb-20 drop-shadow-md">
             ¡Mucha Diversión!
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Link to="/coloring" className="card-glass p-8 text-center group card-hover">
-              <div className="text-8xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🎨</div>
-              <h3 className="text-3xl mb-4 text-gati-verde">Colorear</h3>
-              <p className="text-xl text-gati-marron/80 font-barlow">
-                Elige tu Gatisaurio favorito y dale vida con tus colores.
-              </p>
-            </Link>
-
-            <Link to="/stories" className="card-glass p-8 text-center group card-hover">
-              <div className="text-8xl mb-6 transform group-hover:scale-110 transition-transform duration-300">📚</div>
-              <h3 className="text-3xl mb-4 text-gati-naranja">Cuentos</h3>
-              <p className="text-xl text-gati-marron/80 font-barlow">
-                Escucha historias mágicas antes de dormir.
-              </p>
-            </Link>
-
-            <Link to="/game" className="card-glass p-8 text-center group card-hover">
-              <div className="text-8xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🎮</div>
-              <h3 className="text-3xl mb-4 text-gati-morado">Juegos</h3>
-              <p className="text-xl text-gati-marron/80 font-barlow">
-                Aventuras interactivas para aprender jugando.
-              </p>
-            </Link>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              { to: "/coloring", icon: "🎨", title: "Colorear", desc: "Elige tu Gatisaurio favorito y dale vida con tus colores.", color: "text-gati-verde" },
+              { to: "/stories", icon: "📚", title: "Cuentos", desc: "Escucha historias mágicas antes de dormir.", color: "text-gati-naranja" },
+              { to: "/game", icon: "🎮", title: "Juegos", desc: "Aventuras interactivas para aprender jugando.", color: "text-gati-morado" }
+            ].map((activity, idx) => (
+              <Link key={idx} to={activity.to} className="card-glass p-10 text-center group relative overflow-hidden">
+                <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-${activity.color.split('-')[2]} to-transparent opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <div className="text-9xl mb-8 transform group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 filter drop-shadow-lg">{activity.icon}</div>
+                <h3 className={`text-4xl mb-4 ${activity.color} font-chewy tracking-wider`}>{activity.title}</h3>
+                <p className="text-xl text-gati-marron/90 font-barlow font-medium leading-relaxed">
+                  {activity.desc}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Characters Carousel/Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-5xl text-center text-gati-marron mb-12">
+      {/* Characters Gallery Section */}
+      <section className="py-24 px-0 relative">
+        <div className="container mx-auto px-4 mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <h2 className="text-6xl text-center md:text-left text-gati-marron drop-shadow-md">
             Conoce a la Manada
           </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="hidden md:flex gap-2 text-gati-marron/60 font-barlow text-lg animate-pulse">
+            <span>← Desliza para ver más →</span>
+          </div>
+        </div>
+        
+        {/* Horizontal Scroll Container */}
+        <div className="w-full overflow-x-auto pb-12 pt-4 px-4 md:px-0 scrollbar-hide snap-x snap-mandatory">
+          <div className="flex gap-6 md:gap-8 w-max px-4 md:px-8">
             {characters.map((char, index) => (
               <div 
                 key={char.name} 
-                className="card-glass p-4 text-center group card-hover flex flex-col items-center"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="snap-center shrink-0 w-[280px] md:w-[320px] card-glass p-6 text-center group relative overflow-hidden transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl bg-white/40"
               >
-                <div className="h-48 w-full flex items-center justify-center mb-4 overflow-hidden">
+                {/* Background Glow */}
+                <div className={`absolute inset-0 bg-gradient-to-b from-white/0 via-white/0 to-${char.color.replace('text-', '')}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                
+                <div className="h-64 w-full flex items-center justify-center mb-6 relative z-10">
                   <img 
                     src={char.img}
                     alt={char.name}
-                    className="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-500"
+                    className="max-h-full w-auto object-contain transform group-hover:scale-115 group-hover:rotate-3 transition-transform duration-500 filter drop-shadow-xl"
+                    loading="lazy"
                   />
                 </div>
-                <h4 className="text-2xl text-gati-marron mb-2">{char.name}</h4>
-                <p className="text-gati-marron/70 font-barlow leading-tight">
-                  {char.desc}
-                </p>
+                
+                <div className="relative z-10">
+                  <h4 className={`text-3xl ${char.color} mb-3 font-chewy tracking-wide`}>{char.name}</h4>
+                  <p className="text-gati-marron/80 font-barlow text-lg font-medium leading-tight px-2">
+                    {char.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -116,22 +123,24 @@ export function HomePage() {
       </section>
 
       {/* Store Teaser */}
-      <section className="py-20 px-4 bg-gati-naranja/10 relative overflow-hidden">
-        <div className="container mx-auto text-center relative z-10">
-          <h2 className="text-5xl text-gati-marron mb-8">
+      <section className="py-24 px-4 relative overflow-hidden mt-12">
+        <div className="absolute inset-0 bg-gati-naranja/10 rounded-[3rem] transform -rotate-1 mx-4 md:mx-12" />
+        
+        <div className="container mx-auto text-center relative z-10 py-8">
+          <h2 className="text-6xl text-gati-marron mb-8 drop-shadow-md">
             Tienda Mágica
           </h2>
-          <p className="text-2xl font-barlow text-gati-marron mb-12 max-w-2xl mx-auto">
+          <p className="text-2xl font-barlow text-gati-marron mb-12 max-w-2xl mx-auto font-medium">
             ¡Llévate a casa un pedacito de magia! Peluches, playeras y tazas de tus personajes favoritos.
           </p>
           
-          <Link to="/tienda" className="btn-accent inline-flex items-center gap-2">
+          <Link to="/tienda" className="btn-accent inline-flex items-center gap-3 text-2xl px-10 py-4 shadow-xl hover:shadow-2xl ring-4 ring-white/50">
             <span>🛍️</span> Visitar Tienda
           </Link>
 
           {/* Decorative floating items */}
-          <div className="hidden md:block absolute top-1/2 left-10 text-8xl animate-float opacity-50">🧸</div>
-          <div className="hidden md:block absolute top-1/2 right-10 text-8xl animate-float-delayed opacity-50">👕</div>
+          <div className="hidden lg:block absolute top-1/2 left-20 text-9xl animate-float opacity-80 filter drop-shadow-lg">🧸</div>
+          <div className="hidden lg:block absolute top-1/2 right-20 text-9xl animate-float-delayed opacity-80 filter drop-shadow-lg">👕</div>
         </div>
       </section>
     </div>

@@ -18,7 +18,7 @@ export default {
         'gati-card-bg': 'rgba(255, 255, 255, 0.7)',
       },
       fontFamily: {
-        'mango': ['"Mango AC"', 'cursive'],
+        'chewy': ['"Chewy"', 'cursive'],
         'barlow': ['"Barlow Condensed"', 'sans-serif'],
       },
       backgroundImage: {

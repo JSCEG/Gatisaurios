@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mango+AC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,53 +16,67 @@
   h4,
   h5,
   h6 {
-    @apply font-mango;
+    @apply font-chewy tracking-wide;
   }
 }
 
 @layer components {
-
   /* Botones Aventura */
   .btn-primary {
-    @apply bg-gati-naranja text-white font-mango text-xl px-8 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:bg-orange-600 hover:scale-105 hover:rotate-1 active:scale-95 active:shadow-sm;
+    @apply bg-gati-naranja text-white font-chewy text-xl px-8 py-3 rounded-full 
+           shadow-lg transform transition-all duration-300 
+           hover:bg-orange-600 hover:scale-105 hover:rotate-1
+           active:scale-95 active:shadow-sm;
   }
-
+  
   .btn-secondary {
-    @apply bg-gati-verde text-white font-mango text-xl px-8 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:bg-green-600 hover:scale-105 hover:-rotate-1 active:scale-95 active:shadow-sm;
+    @apply bg-gati-verde text-white font-chewy text-xl px-8 py-3 rounded-full 
+           shadow-lg transform transition-all duration-300 
+           hover:bg-green-600 hover:scale-105 hover:-rotate-1
+           active:scale-95 active:shadow-sm;
   }
 
   .btn-accent {
-    @apply bg-gati-amarillo text-gati-marron font-mango text-xl px-8 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:bg-yellow-400 hover:scale-105 hover:rotate-1 active:scale-95 active:shadow-sm;
+    @apply bg-gati-amarillo text-gati-marron font-chewy text-xl px-8 py-3 rounded-full 
+           shadow-lg transform transition-all duration-300 
+           hover:bg-yellow-400 hover:scale-105 hover:rotate-1
+           active:scale-95 active:shadow-sm;
   }
 
   /* Tarjetas Cristal Mejoradas */
   .card-glass {
-    @apply bg-white/60 backdrop-blur-md border border-white/40 rounded-3xl shadow-xl transition-all duration-300;
+    @apply bg-white/40 backdrop-blur-xl border border-white/50 
+           rounded-3xl shadow-lg transition-all duration-500
+           hover:shadow-gati-naranja/20 hover:border-white/80;
   }
-
+  
   .card-hover {
-    @apply hover:bg-white/80 hover:-translate-y-2 hover:shadow-2xl;
+    @apply hover:bg-white/60 hover:-translate-y-2 hover:shadow-2xl;
   }
 
+  /* Scrollbar personalizada */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
   /* Inputs */
   .input-field {
-    @apply w-full px-4 py-3 rounded-xl border-2 border-gati-marron/20 bg-white/80 font-barlow text-lg text-gati-marron outline-none focus:border-gati-naranja focus:ring-2 focus:ring-gati-naranja/20 transition-all duration-300;
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gati-marron/20 
+           bg-white/80 font-barlow text-lg text-gati-marron outline-none
+           focus:border-gati-naranja focus:ring-2 focus:ring-gati-naranja/20 
+           transition-all duration-300;
   }
 }
 
 /* Animaciones */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .animate-float {
