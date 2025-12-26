@@ -27,18 +27,18 @@ export function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-gati-cielo/30 via-transparent to-gati-bg/50 pointer-events-none" />
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-gati-amarillo/20 rounded-full blur-3xl" />
         <div className="absolute top-40 -right-20 w-72 h-72 bg-gati-morado/20 rounded-full blur-3xl" />
-        
-        <img 
-          src="/img/GatisauriosTitulo.svg" 
-          alt="Gatisaurios - Para Colorear" 
+
+        <img
+          src="/img/GatisauriosTitulo.svg"
+          alt="Gatisaurios - Para Colorear"
           className="max-w-4xl w-full mx-auto mb-8 animate-float z-10 drop-shadow-2xl filter"
         />
-        
+
         <div className="z-10 text-center relative">
           <p className="text-2xl md:text-4xl text-gati-marron font-chewy mb-10 max-w-3xl mx-auto drop-shadow-sm tracking-wide leading-relaxed">
             ¡Únete a la manada más divertida! Colorea, juega y vive grandes aventuras.
           </p>
-          
+
           {user ? (
             <Link to="/coloring" className="btn-primary inline-flex items-center gap-3 text-2xl px-12 py-5 transform hover:rotate-2 shadow-xl hover:shadow-2xl ring-4 ring-white/50">
               <span>🎨</span> ¡Vamos a Pintar!
@@ -54,12 +54,12 @@ export function HomePage() {
       {/* Activities Section */}
       <section className="py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-white/30 backdrop-blur-sm -skew-y-2 transform origin-top-left scale-110" />
-        
+
         <div className="container mx-auto relative z-10">
           <h2 className="text-6xl text-center text-gati-marron mb-20 drop-shadow-md">
             ¡Mucha Diversión!
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-10">
             {[
               { to: "/coloring", icon: "🎨", title: "Colorear", desc: "Elige tu Gatisaurio favorito y dale vida con tus colores.", color: "text-gati-verde" },
@@ -89,27 +89,27 @@ export function HomePage() {
             <span>← Desliza para ver más →</span>
           </div>
         </div>
-        
+
         {/* Horizontal Scroll Container */}
         <div className="w-full overflow-x-auto pb-12 pt-4 px-4 md:px-0 scrollbar-hide snap-x snap-mandatory">
           <div className="flex gap-6 md:gap-8 w-max px-4 md:px-8">
             {characters.map((char, index) => (
-              <div 
-                key={char.name} 
+              <div
+                key={char.name}
                 className="snap-center shrink-0 w-[280px] md:w-[320px] card-glass p-6 text-center group relative overflow-hidden transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl bg-white/40"
               >
                 {/* Background Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-b from-white/0 via-white/0 to-${char.color.replace('text-', '')}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+
                 <div className="h-64 w-full flex items-center justify-center mb-6 relative z-10">
-                  <img 
+                  <img
                     src={char.img}
                     alt={char.name}
                     className="max-h-full w-auto object-contain transform group-hover:scale-115 group-hover:rotate-3 transition-transform duration-500 filter drop-shadow-xl"
                     loading="lazy"
                   />
                 </div>
-                
+
                 <div className="relative z-10">
                   <h4 className={`text-3xl ${char.color} mb-3 font-chewy tracking-wide`}>{char.name}</h4>
                   <p className="text-gati-marron/80 font-barlow text-lg font-medium leading-tight px-2">
@@ -122,25 +122,55 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Store Teaser */}
+      {/* Store Teaser / Banner */}
       <section className="py-24 px-4 relative overflow-hidden mt-12">
-        <div className="absolute inset-0 bg-gati-naranja/10 rounded-[3rem] transform -rotate-1 mx-4 md:mx-12" />
-        
-        <div className="container mx-auto text-center relative z-10 py-8">
-          <h2 className="text-6xl text-gati-marron mb-8 drop-shadow-md">
-            Tienda Mágica
-          </h2>
-          <p className="text-2xl font-barlow text-gati-marron mb-12 max-w-2xl mx-auto font-medium">
-            ¡Llévate a casa un pedacito de magia! Peluches, playeras y tazas de tus personajes favoritos.
-          </p>
-          
-          <Link to="/tienda" className="btn-accent inline-flex items-center gap-3 text-2xl px-10 py-4 shadow-xl hover:shadow-2xl ring-4 ring-white/50">
-            <span>🛍️</span> Visitar Tienda
-          </Link>
+        {/* Banner Background with modern gradient and shape */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gati-naranja via-orange-400 to-gati-amarillo rounded-[3rem] transform -rotate-1 mx-4 md:mx-12 shadow-2xl" />
 
-          {/* Decorative floating items */}
-          <div className="hidden lg:block absolute top-1/2 left-20 text-9xl animate-float opacity-80 filter drop-shadow-lg">🧸</div>
-          <div className="hidden lg:block absolute top-1/2 right-20 text-9xl animate-float-delayed opacity-80 filter drop-shadow-lg">👕</div>
+        {/* Decorative Overlay Pattern */}
+        <div className="absolute inset-0 opacity-10 mx-4 md:mx-12 rounded-[3rem] pointer-events-none bg-[url('/img/GatisauriosFondo.svg')] bg-repeat bg-center" />
+
+        <div className="container mx-auto relative z-10 py-12 md:py-20 px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+
+          {/* Text Content */}
+          <div className="text-center md:text-left max-w-2xl text-white">
+            <div className="inline-block px-4 py-1 bg-white/20 backdrop-blur-md rounded-full text-sm font-bold tracking-wider mb-6 border border-white/30 uppercase animate-pulse">
+              ¡Nueva Colección!
+            </div>
+            <h2 className="text-5xl md:text-7xl font-chewy mb-6 drop-shadow-lg leading-tight">
+              Tienda Mágica
+            </h2>
+            <p className="text-xl md:text-2xl font-barlow mb-10 font-medium opacity-90 leading-relaxed">
+              ¡Llévate a casa un pedacito de magia! Descubre nuestros peluches abrazables, playeras de aventura y tazas encantadas.
+            </p>
+
+            <Link
+              to="/tienda"
+              className="group relative inline-flex items-center gap-4 bg-white text-gati-naranja font-chewy text-2xl px-10 py-4 rounded-full shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-orange-50"
+            >
+              <span>Ir a la Tienda</span>
+              <span className="bg-gati-naranja text-white w-10 h-10 rounded-full flex items-center justify-center text-xl transition-transform duration-300 group-hover:rotate-45">
+                ➜
+              </span>
+            </Link>
+          </div>
+
+          {/* Visual Elements - Floating Products */}
+          <div className="relative w-full max-w-md h-[400px] hidden md:block">
+            {/* Circle Background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl animate-pulse" />
+
+            {/* Floating Items */}
+            <div className="absolute top-0 right-10 text-[10rem] animate-float drop-shadow-2xl filter hover:scale-110 transition-transform cursor-pointer">
+              🧸
+            </div>
+            <div className="absolute bottom-10 left-10 text-[8rem] animate-float-delayed drop-shadow-2xl filter hover:scale-110 transition-transform cursor-pointer">
+              👕
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[6rem] animate-float drop-shadow-xl opacity-80 filter blur-[1px]">
+              ✨
+            </div>
+          </div>
         </div>
       </section>
     </div>
