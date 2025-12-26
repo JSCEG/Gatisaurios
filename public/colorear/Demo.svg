@@ -1,0 +1,36 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .colorable { fill: #ffffff; stroke: #000000; stroke-width: 4px; cursor: pointer; transition: fill 0.2s; }
+      .colorable:hover { fill: #f0f0f0; }
+    </style>
+  </defs>
+  
+  <!-- Fondo (Cielo) -->
+  <rect x="0" y="0" width="800" height="600" fill="#ffffff" class="colorable" id="sky"/>
+  
+  <!-- Montañas -->
+  <path d="M0 600 L200 300 L400 600 Z" class="colorable" id="mountain1"/>
+  <path d="M300 600 L500 200 L700 600 Z" class="colorable" id="mountain2"/>
+  
+  <!-- Sol -->
+  <circle cx="700" cy="100" r="60" class="colorable" id="sun"/>
+  
+  <!-- Gatisaurio Simple -->
+  <g transform="translate(300, 350)">
+    <!-- Cola -->
+    <path d="M0 100 Q-50 150 -50 50" class="colorable" />
+    <!-- Cuerpo -->
+    <ellipse cx="50" cy="100" rx="60" ry="80" class="colorable" />
+    <!-- Cabeza -->
+    <circle cx="50" cy="40" r="50" class="colorable" />
+    <!-- Orejas -->
+    <path d="M10 10 L30 -30 L50 10 Z" class="colorable" />
+    <path d="M50 10 L70 -30 L90 10 Z" class="colorable" />
+    <!-- Ojos -->
+    <circle cx="35" cy="35" r="5" fill="black" />
+    <circle cx="65" cy="35" r="5" fill="black" />
+    <!-- Boca -->
+    <path d="M40 55 Q50 65 60 55" fill="none" stroke="black" stroke-width="3" />
+  </g>
+</svg>

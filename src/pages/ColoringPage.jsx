@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import { ProtectedRoute } from '../components/auth/ProtectedRoute'
 import { Download, Heart, Share2, PaintBucket } from 'lucide-react'
+import { ColoringCanvas } from '../components/coloring/ColoringCanvas'
 
 export function ColoringPage() {
   const [activeFilter, setActiveFilter] = useState('todos')
+  const [selectedDrawing, setSelectedDrawing] = useState(null) // Para el modal
 
+  // Usamos el Demo.svg para todos temporalmente o asignamos uno real si existiera
   const drawings = [
-    { id: 1, name: 'Burbujasaurio Feliz', category: 'facil', image: '/img/personajes/burbujasaurio.svg', color: 'bg-gati-cielo' },
-    { id: 2, name: 'Chefisaurio Cocinando', category: 'medio', image: '/img/personajes/chefisaurio.svg', color: 'bg-gati-naranja' },
-    { id: 3, name: 'Escobasaurio Limpiando', category: 'facil', image: '/img/personajes/escobasaurio.svg', color: 'bg-gati-verde' },
-    { id: 4, name: 'Lectosaurio Leyendo', category: 'dificil', image: '/img/personajes/lectosaurio.svg', color: 'bg-gati-azul' },
-    { id: 5, name: 'Rockosaurio Tocando', category: 'medio', image: '/img/personajes/rockosaurio.svg', color: 'bg-gati-morado' },
-    { id: 6, name: 'Rodasaurio Corriendo', category: 'facil', image: '/img/personajes/rodasaurio.svg', color: 'bg-gati-azul' },
+    { id: 1, name: 'Burbujasaurio Feliz', category: 'facil', image: '/img/personajes/burbujasaurio.svg', svgUrl: '/colorear/Demo.svg', color: 'bg-gati-cielo' },
+    { id: 2, name: 'Chefisaurio Cocinando', category: 'medio', image: '/img/personajes/chefisaurio.svg', svgUrl: '/colorear/Demo.svg', color: 'bg-gati-naranja' },
+    { id: 3, name: 'Escobasaurio Limpiando', category: 'facil', image: '/img/personajes/escobasaurio.svg', svgUrl: '/colorear/Demo.svg', color: 'bg-gati-verde' },
+    { id: 4, name: 'Lectosaurio Leyendo', category: 'dificil', image: '/img/personajes/lectosaurio.svg', svgUrl: '/colorear/Demo.svg', color: 'bg-gati-azul' },
+    { id: 5, name: 'Rockosaurio Tocando', category: 'medio', image: '/img/personajes/rockosaurio.svg', svgUrl: '/colorear/Demo.svg', color: 'bg-gati-morado' },
+    { id: 6, name: 'Rodasaurio Corriendo', category: 'facil', image: '/img/personajes/rodasaurio.svg', svgUrl: '/colorear/Demo.svg', color: 'bg-gati-azul' },
   ]
 
   const filters = [
@@ -73,11 +76,12 @@ export function ColoringPage() {
                   
                   {/* Hover Overlay Actions */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    <button className="w-12 h-12 rounded-full bg-white text-gati-marron shadow-lg flex items-center justify-center hover:bg-gati-naranja hover:text-white transition-colors" title="Colorear en línea">
-                      <PaintBucket size={24} />
-                    </button>
-                    <button className="w-12 h-12 rounded-full bg-white text-gati-marron shadow-lg flex items-center justify-center hover:bg-gati-verde hover:text-white transition-colors" title="Descargar PDF">
-                      <Download size={24} />
+                    <button 
+                      onClick={() => setSelectedDrawing(drawing)}
+                      className="w-16 h-16 rounded-full bg-white text-gati-marron shadow-lg flex items-center justify-center hover:bg-gati-naranja hover:text-white transition-colors transform hover:scale-110" 
+                      title="Colorear en línea"
+                    >
+                      <PaintBucket size={32} />
                     </button>
                   </div>
                 </div>
@@ -105,6 +109,16 @@ export function ColoringPage() {
             ))}
           </div>
         </div>
+
+        {/* Coloring Modal */}
+        {selectedDrawing && (
+          <ColoringCanvas 
+            svgUrl={selectedDrawing.svgUrl} 
+            title={selectedDrawing.name}
+            onClose={() => setSelectedDrawing(null)} 
+          />
+        )}
+
       </div>
     </ProtectedRoute>
   )
