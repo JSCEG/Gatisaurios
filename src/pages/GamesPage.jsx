@@ -189,6 +189,20 @@ export function GamesPage() {
                                     <p className="text-center font-barlow text-gati-marron/80 leading-tight">{char.desc}</p>
                                 </button>
                             ))}
+
+                            {/* Locked Character Slot (CTA) */}
+                            <div className="group relative p-6 rounded-3xl border-4 border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center text-center opacity-80 hover:opacity-100 transition-opacity">
+                                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <span className="text-4xl">🔒</span>
+                                </div>
+                                <h3 className="text-2xl font-chewy text-gray-400 mb-2">???</h3>
+                                <p className="font-barlow text-gray-500 text-sm mb-4">
+                                    ¡Regístrate para desbloquear nuevos héroes y habilidades especiales!
+                                </p>
+                                <a href="/login" className="btn-primary py-2 px-6 text-sm">
+                                    Iniciar Sesión
+                                </a>
+                            </div>
                         </div>
                     )}
 
@@ -196,6 +210,17 @@ export function GamesPage() {
                     {gameState === 'map_select' && (
                         <div className="p-8 flex flex-col items-center justify-center h-full">
                             <h2 className="text-3xl font-chewy text-gati-marron mb-8">¿Dónde quieres ir, {selectedCharacter.name}?</h2>
+
+                            {/* Bonus Level Button (Fallback if auto-trigger fails) */}
+                            {score >= 200 && (
+                                <button
+                                    onClick={() => setGameState('runner_game')}
+                                    className="mb-8 bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-chewy text-2xl py-3 px-8 rounded-full shadow-lg hover:scale-105 transition-transform animate-bounce"
+                                >
+                                    🚀 ¡Jugar Nivel Bonus! 🚀
+                                </button>
+                            )}
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
                                 {zones.map(zone => (
                                     <button
