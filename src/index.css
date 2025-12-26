@@ -7,30 +7,70 @@
 
 @layer base {
   body {
-    @apply font-barlow bg-gati-bg min-h-screen;
+    @apply font-barlow bg-gati-bg min-h-screen overflow-x-hidden;
   }
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-mango;
   }
 }
 
 @layer components {
-  .btn-cta {
-    @apply bg-gati-naranja text-white font-barlow text-lg px-6 py-3 rounded-full uppercase tracking-wide transition-all duration-300 hover:bg-orange-600 hover:scale-105;
+
+  /* Botones Aventura */
+  .btn-primary {
+    @apply bg-gati-naranja text-white font-mango text-xl px-8 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:bg-orange-600 hover:scale-105 hover:rotate-1 active:scale-95 active:shadow-sm;
   }
 
+  .btn-secondary {
+    @apply bg-gati-verde text-white font-mango text-xl px-8 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:bg-green-600 hover:scale-105 hover:-rotate-1 active:scale-95 active:shadow-sm;
+  }
+
+  .btn-accent {
+    @apply bg-gati-amarillo text-gati-marron font-mango text-xl px-8 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:bg-yellow-400 hover:scale-105 hover:rotate-1 active:scale-95 active:shadow-sm;
+  }
+
+  /* Tarjetas Cristal Mejoradas */
   .card-glass {
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    @apply border border-white border-opacity-10 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1;
+    @apply bg-white/60 backdrop-blur-md border border-white/40 rounded-3xl shadow-xl transition-all duration-300;
   }
 
-  .card-glass:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+  .card-hover {
+    @apply hover:bg-white/80 hover:-translate-y-2 hover:shadow-2xl;
   }
+
+  /* Inputs */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gati-marron/20 bg-white/80 font-barlow text-lg text-gati-marron outline-none focus:border-gati-naranja focus:ring-2 focus:ring-gati-naranja/20 transition-all duration-300;
+  }
+}
+
+/* Animaciones */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out infinite 1.5s;
 }
 
 * {

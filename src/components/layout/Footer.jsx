@@ -1,22 +1,27 @@
+import { Link } from 'react-router-dom'
+
 export function Footer() {
   return (
     <footer className="bg-gati-verde text-white py-8 mt-auto">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-gati-naranja transition-colors">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row gap-6 text-center md:text-left">
+            <Link to="/privacidad" className="hover:text-gati-amarillo transition-colors font-mango tracking-wide">
               Aviso de Privacidad
-            </a>
-            <a href="#" className="hover:text-gati-naranja transition-colors">
+            </Link>
+            <Link to="/terminos" className="hover:text-gati-amarillo transition-colors font-mango tracking-wide">
               Términos y Condiciones
-            </a>
-            <a href="#" className="hover:text-gati-naranja transition-colors">
+            </Link>
+            <Link to="/contacto" className="hover:text-gati-amarillo transition-colors font-mango tracking-wide">
               Contacto
-            </a>
+            </Link>
           </div>
-          <p className="text-sm">
-            &copy; 2025 Gatisaurios. Todos los derechos reservados.
-          </p>
+          
+          <div className="flex items-center gap-4">
+            <p className="text-sm font-barlow opacity-80">
+              &copy; 2025 Gatisaurios. Hecho con 🐾 y mucho amor.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
