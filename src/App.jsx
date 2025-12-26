@@ -18,7 +18,7 @@ function App() {
         <div className="fixed -bottom-20 -right-20 md:-bottom-40 md:-right-40 w-[500px] h-[500px] md:w-[800px] md:h-[800px] pointer-events-none z-0 opacity-5 mix-blend-multiply">
           <img src="/img/personajes/burbujasaurio.svg" alt="Fondo" className="w-full h-full object-contain transform -rotate-12" />
         </div>
-        
+
         <Navbar />
         <main className="flex-1 relative z-10">
           <Routes>
@@ -26,6 +26,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/coloring" element={<ColoringPage />} />
             <Route path="/stories" element={<StoriesPage />} />
+            <Route path="/juegos" element={<GamesPage />} />
             <Route path="/tienda" element={<StorePage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/privacidad" element={<PrivacyPage />} />

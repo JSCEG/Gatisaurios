@@ -34,6 +34,13 @@ export function Navbar() {
         Cuentos
       </Link>
       <Link 
+        to="/juegos" 
+        className={`text-gati-marron hover:text-gati-verde transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
+        onClick={() => mobile && toggleMenu()}
+      >
+        Juegos
+      </Link>
+      <Link 
         to="/tienda" 
         className={`text-gati-marron hover:text-gati-naranja transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}

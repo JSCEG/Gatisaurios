@@ -37,7 +37,7 @@ export function StorePage() {
   return (
     <div className="min-h-screen bg-gati-bg">
       {/* Hero Tienda */}
-      <div className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-b from-gati-amarillo/10 to-transparent">
+      <div className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-br from-gati-morado/20 via-gati-amarillo/10 to-gati-naranja/10">
         {/* Decorative Elements */}
         <div className="absolute top-20 left-10 text-6xl animate-bounce-slow opacity-60">🛍️</div>
         <div className="absolute top-40 right-20 text-6xl animate-pulse opacity-60">🎁</div>
