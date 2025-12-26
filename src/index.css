@@ -9,8 +9,10 @@
   body {
     @apply font-barlow bg-gati-bg min-h-screen;
   }
-  
-  h1, h2, h3 {
+
+  h1,
+  h2,
+  h3 {
     @apply font-mango;
   }
 }
@@ -19,13 +21,13 @@
   .btn-cta {
     @apply bg-gati-naranja text-white font-barlow text-lg px-6 py-3 rounded-full uppercase tracking-wide transition-all duration-300 hover:bg-orange-600 hover:scale-105;
   }
-  
+
   .card-glass {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     @apply border border-white border-opacity-10 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1;
   }
-  
+
   .card-glass:hover {
     background-color: rgba(255, 255, 255, 0.08);
   }
