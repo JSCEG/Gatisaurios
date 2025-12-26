@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer'
 import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
 import { ColoringPage } from './pages/ColoringPage'
+import { StoriesPage } from './pages/StoriesPage'
 import { StorePage } from './pages/StorePage'
 import { ContactPage } from './pages/ContactPage'
 import { PrivacyPage } from './pages/PrivacyPage'
@@ -12,13 +13,14 @@ import { TermsPage } from './pages/TermsPage'
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-gati-bg">
         <Navbar />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/coloring" element={<ColoringPage />} />
+            <Route path="/stories" element={<StoriesPage />} />
             <Route path="/tienda" element={<StorePage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/privacidad" element={<PrivacyPage />} />

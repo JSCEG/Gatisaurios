@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply font-barlow bg-gati-bg min-h-screen overflow-x-hidden;
+    @apply font-barlow bg-gati-bg min-h-screen overflow-x-hidden text-gati-marron;
   }
 
   h1,
@@ -22,42 +22,38 @@
 }
 
 @layer components {
-  /* Botones Aventura */
-  .btn-primary {
+  /* Botones Aventura Refinados */
+  .btn-base {
     font-family: "Chewy", cursive;
-    @apply bg-gati-naranja text-white text-xl px-8 py-3 rounded-full 
-           shadow-lg transform transition-all duration-300 
-           hover:bg-orange-600 hover:scale-105 hover:rotate-1
-           active:scale-95 active:shadow-sm;
+    @apply inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300 transform active:scale-95 active:shadow-sm;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-gradient-to-r from-gati-naranja to-orange-500 text-white text-xl px-8 py-3 
+           shadow-lg hover:shadow-orange-500/30 hover:-translate-y-1 hover:brightness-110;
   }
   
   .btn-secondary {
-    font-family: "Chewy", cursive;
-    @apply bg-gati-verde text-white text-xl px-8 py-3 rounded-full 
-           shadow-lg transform transition-all duration-300 
-           hover:bg-green-600 hover:scale-105 hover:-rotate-1
-           active:scale-95 active:shadow-sm;
+    @apply btn-base bg-gradient-to-r from-gati-verde to-green-500 text-white text-xl px-8 py-3 
+           shadow-lg hover:shadow-green-500/30 hover:-translate-y-1 hover:brightness-110;
   }
 
   .btn-accent {
-    font-family: "Chewy", cursive;
-    @apply bg-gati-amarillo text-gati-marron text-xl px-8 py-3 rounded-full 
-           shadow-lg transform transition-all duration-300 
-           hover:bg-yellow-400 hover:scale-105 hover:rotate-1
-           active:scale-95 active:shadow-sm;
+    @apply btn-base bg-gradient-to-r from-gati-amarillo to-yellow-400 text-gati-marron text-xl px-8 py-3 
+           shadow-lg hover:shadow-yellow-400/30 hover:-translate-y-1 hover:brightness-110;
   }
 
-  /* Tarjetas Cristal Mejoradas */
+  /* Glassmorphism Premium */
   .card-glass {
-    @apply bg-white/40 backdrop-blur-xl border border-white/50 
-           rounded-3xl shadow-lg transition-all duration-500
-           hover:shadow-gati-naranja/20 hover:border-white/80;
+    @apply bg-white/60 backdrop-blur-xl border border-white/40 
+           rounded-3xl shadow-xl transition-all duration-500
+           hover:shadow-2xl hover:bg-white/70 hover:border-white/60;
+  }
+
+  .card-glass-dark {
+    @apply bg-black/5 backdrop-blur-md border border-white/10 rounded-2xl;
   }
   
-  .card-hover {
-    @apply hover:bg-white/60 hover:-translate-y-2 hover:shadow-2xl;
-  }
-
   /* Scrollbar personalizada */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -67,12 +63,17 @@
     scrollbar-width: none;
   }
   
-  /* Inputs */
+  /* Inputs Modernos */
   .input-field {
-    @apply w-full px-4 py-3 rounded-xl border-2 border-gati-marron/20 
-           bg-white/80 font-barlow text-lg text-gati-marron outline-none
-           focus:border-gati-naranja focus:ring-2 focus:ring-gati-naranja/20 
-           transition-all duration-300;
+    @apply w-full px-5 py-4 rounded-2xl border-2 border-transparent bg-white/80 
+           font-barlow text-lg text-gati-marron outline-none shadow-inner
+           focus:border-gati-naranja focus:bg-white focus:ring-4 focus:ring-gati-naranja/10 
+           transition-all duration-300 placeholder-gati-marron/40;
+  }
+
+  /* Badges */
+  .badge {
+    @apply px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider font-barlow;
   }
 }
 
@@ -84,11 +85,19 @@
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
 .animate-float-delayed {
-  animation: float 3s ease-in-out infinite 1.5s;
+  animation: float 4s ease-in-out infinite 2s;
+}
+
+.text-shadow-sm {
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
 }
 
 * {
