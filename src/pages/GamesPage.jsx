@@ -146,6 +146,108 @@ export function GamesPage() {
         setSelectedCharacter(null)
     }
 
+    // Mini-Juego de Correr y Esquivar
+    const RunnerGame = ({ onWin, onLose }) => {
+        const [playerY, setPlayerY] = useState(0) // 0 es el suelo
+        const [isJumping, setIsJumping] = useState(false)
+        const [obstacleX, setObstacleX] = useState(100) // Posición X del obstáculo (porcentaje)
+        const [gameTime, setGameTime] = useState(0)
+
+        // Gravedad y Salto
+        useEffect(() => {
+            let jumpInterval
+            if (isJumping) {
+                let jumpHeight = 0
+                let goingUp = true
+                jumpInterval = setInterval(() => {
+                    if (goingUp) {
+                        jumpHeight += 5
+                        if (jumpHeight >= 40) goingUp = false // Altura máxima
+                    } else {
+                        jumpHeight -= 5
+                    }
+
+                    setPlayerY(jumpHeight)
+
+                    if (jumpHeight <= 0 && !goingUp) {
+                        setPlayerY(0)
+                        setIsJumping(false)
+                        clearInterval(jumpInterval)
+                    }
+                }, 50)
+            }
+            return () => clearInterval(jumpInterval)
+        }, [isJumping])
+
+        // Movimiento del Obstáculo y Colisiones
+        useEffect(() => {
+            const gameLoop = setInterval(() => {
+                setObstacleX(prev => {
+                    if (prev <= -10) return 100 // Reiniciar obstáculo
+                    return prev - 2 // Velocidad del obstáculo
+                })
+                setGameTime(prev => prev + 1)
+            }, 50)
+
+            return () => clearInterval(gameLoop)
+        }, [])
+
+        // Detectar Colisión
+        useEffect(() => {
+            // Si el obstáculo está en la posición del jugador (aprox 10-20%) y el jugador está en el suelo
+            if (obstacleX < 20 && obstacleX > 5 && playerY < 10) {
+                onLose()
+            }
+            // Condición de Victoria (sobrevivir cierto tiempo)
+            if (gameTime > 200) { // aprox 10 segundos
+                onWin()
+            }
+        }, [obstacleX, playerY, gameTime, onLose, onWin])
+
+        // Controles
+        useEffect(() => {
+            const handleKeyDown = (e) => {
+                if ((e.code === 'Space' || e.code === 'ArrowUp') && !isJumping) {
+                    setIsJumping(true)
+                }
+            }
+            window.addEventListener('keydown', handleKeyDown)
+            return () => window.removeEventListener('keydown', handleKeyDown)
+        }, [isJumping])
+
+        return (
+            <div className="relative w-full h-full bg-gradient-to-b from-blue-300 to-blue-100 overflow-hidden rounded-3xl">
+                <div className="absolute top-4 left-4 font-chewy text-2xl text-white drop-shadow-md z-10">
+                    ¡Corre! Tiempo: {Math.floor(gameTime / 10)}
+                </div>
+
+                {/* Suelo */}
+                <div className="absolute bottom-0 w-full h-16 bg-green-500 border-t-4 border-green-600"></div>
+
+                {/* Jugador */}
+                <div
+                    className="absolute left-10 w-16 h-16 transition-all duration-75"
+                    style={{ bottom: `${playerY + 64}px` }} // 64px es la altura del suelo
+                >
+                    <img src={selectedCharacter?.image} alt="Player" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Obstáculo */}
+                <div
+                    className="absolute bottom-16 w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center text-2xl"
+                    style={{ left: `${obstacleX}%` }}
+                >
+                    🔥
+                </div>
+
+                {/* Instrucciones */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none opacity-50">
+                    <p className="font-chewy text-4xl text-white drop-shadow-lg">¡Salta con Espacio!</p>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="min-h-screen bg-gati-bg py-20 px-4">
             <div className="container mx-auto max-w-5xl">
