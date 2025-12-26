@@ -37,14 +37,21 @@ export function StorePage() {
   return (
     <div className="min-h-screen bg-gati-bg">
       {/* Hero Tienda */}
-      <div className="relative py-20 px-4 overflow-hidden">
-        {/* Animated Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gati-amarillo/20 via-gati-naranja/10 to-gati-amarillo/20 animate-pulse" />
+      <div className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-b from-gati-amarillo/10 to-transparent">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 text-6xl animate-bounce-slow opacity-60">🛍️</div>
+        <div className="absolute top-40 right-20 text-6xl animate-pulse opacity-60">🎁</div>
+        <div className="absolute -top-20 -right-20 w-96 h-96 bg-gati-naranja/20 rounded-full blur-3xl mix-blend-multiply" />
+        <div className="absolute top-40 -left-20 w-72 h-72 bg-gati-amarillo/30 rounded-full blur-3xl mix-blend-multiply" />
 
         <div className="container mx-auto text-center relative z-10">
-          <h1 className="text-6xl md:text-8xl text-gati-marron mb-6 font-chewy drop-shadow-sm">Tienda Mágica</h1>
-          <p className="text-xl md:text-2xl text-gati-marron/80 font-barlow max-w-2xl mx-auto font-medium leading-relaxed">
-            ¡Llévate la magia a casa! Todos nuestros productos apoyan la creación de más cuentos y juegos.
+          <div className="inline-block px-6 py-2 bg-gati-morado/10 rounded-full text-gati-morado font-bold tracking-widest uppercase mb-4 animate-fade-in">
+            Mercado Oficial
+          </div>
+          <h1 className="text-mango-title mb-8">Tienda Mágica</h1>
+          <p className="text-2xl text-gati-marron/80 font-barlow max-w-2xl mx-auto font-medium leading-relaxed">
+            ¡Llévate la magia a casa! <br />
+            <span className="text-gati-naranja">Cada tesoro apoya nuevas aventuras.</span>
           </p>
         </div>
       </div>
@@ -61,20 +68,20 @@ export function StorePage() {
               </div>
 
               <div className="mb-4 relative z-10">
-                <span className="text-sm font-bold text-gati-naranja uppercase tracking-wider bg-gati-naranja/10 px-3 py-1 rounded-full">
+                <span className="inline-block text-xs font-black text-gati-naranja uppercase tracking-wider bg-gati-naranja/10 px-4 py-1.5 rounded-full mb-2">
                   {product.category}
                 </span>
-                <h3 className="text-3xl text-gati-marron mt-3 font-chewy tracking-wide">{product.name}</h3>
+                <h3 className="text-3xl text-gati-marron font-chewy tracking-wide leading-none">{product.name}</h3>
               </div>
 
-              <p className="text-gati-marron/70 mb-6 flex-grow font-barlow text-lg font-medium leading-tight">
+              <p className="text-gati-marron/70 mb-8 flex-grow font-barlow text-lg font-medium leading-tight">
                 {product.description}
               </p>
 
-              <div className="flex items-center justify-between mt-auto relative z-10 pt-4 border-t border-gati-marron/5">
-                <span className="text-3xl font-bold text-gati-verde font-chewy">{product.price}</span>
-                <button className="btn-primary px-6 py-2 text-lg shadow-md hover:shadow-xl">
-                  Ver Detalles
+              <div className="flex items-center justify-between mt-auto relative z-10 pt-6 border-t-2 border-dashed border-gati-marron/10">
+                <span className="text-4xl font-bold text-gati-verde font-chewy">{product.price}</span>
+                <button className="btn-primary px-6 py-2 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                  Comprar
                 </button>
               </div>
             </div>
