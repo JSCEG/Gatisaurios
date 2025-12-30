@@ -11,6 +11,7 @@ import { GamesPage } from './components/pages/GamesPage'
 import { ContactPage } from './components/pages/ContactPage'
 import { PrivacyPage } from './components/pages/PrivacyPage'
 import { TermsPage } from './components/pages/TermsPage'
+import { MundoGatisaurioPage } from './components/pages/MundoGatisaurioPage'
 
 import { initSupabase } from './lib/supabase';
 
@@ -32,6 +33,7 @@ function App({ supabaseUrl, supabaseAnonKey }) {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/coloring" element={<ColoringPage />} />
             <Route path="/stories" element={<StoriesPage />} />
+            <Route path="/mundo" element={<MundoGatisaurioPage />} />
             <Route path="/juegos" element={<GamesPage />} />
             <Route path="/tienda" element={<StorePage />} />
             <Route path="/contacto" element={<ContactPage />} />

@@ -108,6 +108,53 @@ export function StorePage() {
           <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-white/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl animate-pulse delay-700" />
         </div>
       </div>
+
+      {/* Book Promo Section */}
+      <section className="py-24 px-4 bg-gati-verde/10 relative overflow-hidden">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-block px-4 py-1 bg-gati-verde text-white rounded-full text-sm font-bold tracking-wider mb-6 uppercase animate-bounce">
+              ¡Exclusivo!
+            </div>
+            <h2 className="text-mango-title mb-6">
+              El Libro Mágico
+            </h2>
+            <p className="text-2xl text-gati-marron font-barlow mb-8 leading-relaxed">
+              Descubre las historias originales de los Gatisaurios. Incluye un <strong className="text-gati-verde">Código QR Mágico</strong> que desbloquea sorpresas y juegos exclusivos en la app.
+            </p>
+            <ul className="text-left max-w-md mx-auto md:mx-0 mb-10 space-y-4 text-lg font-barlow text-gati-marron/80">
+              <li className="flex items-center gap-3">
+                <span className="bg-gati-verde text-white rounded-full p-1">✓</span> 50 Páginas de aventuras a color
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-gati-verde text-white rounded-full p-1">✓</span> Stickers de regalo
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-gati-verde text-white rounded-full p-1">✓</span> Acceso a contenido secreto
+              </li>
+            </ul>
+            <a
+              href="https://www.amazon.com.mx/Gatisaurios-Gatitos-disfrazados-dinosaurios-colorear/dp/B0F3NB12WQ/ref=sr_1_5?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-2xl px-10 py-4 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+            >
+              <span>🛒</span> Comprar en Amazon
+            </a>
+          </div>
+
+          <div className="flex-1 relative flex justify-center">
+            <div className="absolute inset-0 bg-gati-verde/20 rounded-full blur-3xl transform scale-90" />
+            <img
+              src="/img/GatisauriosLibro.png"
+              alt="Libro Gatisaurios con QR"
+              className="relative z-10 max-w-sm md:max-w-md w-full transform hover:scale-105 transition-transform duration-500 drop-shadow-2xl -rotate-3 hover:rotate-0"
+            />
+          </div>
+
+        </div>
+      </section>
     </div>
   )
 }

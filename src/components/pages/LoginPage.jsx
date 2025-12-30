@@ -6,7 +6,7 @@ export function LoginPage() {
       <div className="max-w-md w-full">
         <div className="card-glass p-8 text-center">
           <img
-            src="/img/GatisauriosLogo.svg"
+            src="/img/GatisauriosLogo.png"
             alt="Gatisaurios"
             className="h-24 w-auto mx-auto mb-6"
           />

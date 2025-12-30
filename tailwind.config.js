@@ -22,7 +22,7 @@ export default {
         'barlow': ['"Barlow Condensed"', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('/img/GatisauriosFondo.svg')",
+        'hero-pattern': "url('/img/herobg.png')",
       }
     },
   },

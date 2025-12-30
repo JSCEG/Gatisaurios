@@ -113,6 +113,33 @@
   animation: float 4s ease-in-out infinite 2s;
 }
 
+/* Hero Background Animations */
+@keyframes herobg-gravity {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 50% 30%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 70%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-herobg-gravity {
+  animation: herobg-gravity 8s ease-in-out infinite;
+}
+
 .text-shadow-sm {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }

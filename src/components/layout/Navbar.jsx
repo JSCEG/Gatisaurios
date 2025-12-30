@@ -41,6 +41,13 @@ export function Navbar() {
         Juegos
       </Link>
       <Link
+        to="/mundo"
+        className={`text-gati-marron hover:text-gati-morado transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
+        onClick={() => mobile && toggleMenu()}
+      >
+        Mundo 🌍
+      </Link>
+      <Link
         to="/tienda"
         className={`text-gati-marron hover:text-gati-naranja transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}
@@ -65,7 +72,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center group">
             <img
-              src="/img/GatisauriosLogo.svg"
+              src="/img/GatisauriosLogo.png"
               alt="Gatisaurios"
               className="h-14 w-auto transform group-hover:scale-110 transition-transform duration-300 filter drop-shadow-sm"
             />
