@@ -1,17 +1,22 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from 'react';
+import { HashRouter as BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
-import { HomePage } from './pages/HomePage'
-import { LoginPage } from './pages/LoginPage'
-import { ColoringPage } from './pages/ColoringPage'
-import { StoriesPage } from './pages/StoriesPage'
-import { StorePage } from './pages/StorePage'
-import { GamesPage } from './pages/GamesPage'
-import { ContactPage } from './pages/ContactPage'
-import { PrivacyPage } from './pages/PrivacyPage'
-import { TermsPage } from './pages/TermsPage'
+import { HomePage } from './components/pages/HomePage'
+import { LoginPage } from './components/pages/LoginPage'
+import { ColoringPage } from './components/pages/ColoringPage'
+import { StoriesPage } from './components/pages/StoriesPage'
+import { StorePage } from './components/pages/StorePage'
+import { GamesPage } from './components/pages/GamesPage'
+import { ContactPage } from './components/pages/ContactPage'
+import { PrivacyPage } from './components/pages/PrivacyPage'
+import { TermsPage } from './components/pages/TermsPage'
 
-function App() {
+import { initSupabase } from './lib/supabase';
+
+function App({ supabaseUrl, supabaseAnonKey }) {
+  initSupabase(supabaseUrl, supabaseAnonKey);
+
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen bg-gati-bg relative overflow-x-hidden">

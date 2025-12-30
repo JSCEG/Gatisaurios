@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Download, Heart, Share2, PaintBucket } from 'lucide-react'
-import { ColoringCanvas } from '../components/coloring/ColoringCanvas'
+import { ColoringCanvas } from '../coloring/ColoringCanvas'
 
 export function ColoringPage() {
   const [activeFilter, setActiveFilter] = useState('todos')
@@ -47,8 +47,8 @@ export function ColoringPage() {
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
               className={`px-6 py-2 rounded-full font-chewy text-xl transition-all duration-300 ${activeFilter === filter.id
-                  ? 'bg-gati-verde text-white shadow-lg scale-105'
-                  : 'bg-white text-gati-marron hover:bg-white/80'
+                ? 'bg-gati-verde text-white shadow-lg scale-105'
+                : 'bg-white text-gati-marron hover:bg-white/80'
                 }`}
             >
               {filter.label}

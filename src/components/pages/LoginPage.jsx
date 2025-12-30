@@ -1,26 +1,26 @@
-import { LoginButton } from '../components/auth/LoginButton'
+import { LoginButton } from '../auth/LoginButton'
 
 export function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="card-glass p-8 text-center">
-          <img 
-            src="/img/GatisauriosLogo.svg" 
-            alt="Gatisaurios" 
+          <img
+            src="/img/GatisauriosLogo.svg"
+            alt="Gatisaurios"
             className="h-24 w-auto mx-auto mb-6"
           />
-          
+
           <h1 className="text-3xl mb-4 text-gati-verde">
             ¡Bienvenido a Gatisaurios!
           </h1>
-          
+
           <p className="text-gray-700 mb-8">
             Inicia sesión para guardar tus dibujos, escuchar cuentos y mucho más
           </p>
-          
+
           <LoginButton />
-          
+
           <div className="mt-8 pt-8 border-t border-gray-200">
             <h3 className="text-lg mb-4 text-gati-marron">
               ¿Qué incluye tu cuenta?

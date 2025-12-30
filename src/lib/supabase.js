@@ -1,12 +1,24 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+let supabase;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const initSupabase = (supabaseUrl, supabaseAnonKey) => {
+  if (!supabase) {
+    supabase = createClient(supabaseUrl, supabaseAnonKey);
+  }
+  return supabase;
+};
+
+export const getSupabase = () => {
+  if (!supabase) {
+    throw new Error("Supabase has not been initialized. Call initSupabase first.");
+  }
+  return supabase;
+};
 
 // Helper para obtener el usuario actual
 export const getCurrentUser = async () => {
+  const supabase = getSupabase();
   const { data: { user }, error } = await supabase.auth.getUser()
   if (error) throw error
   return user
@@ -14,6 +26,7 @@ export const getCurrentUser = async () => {
 
 // Helper para logout
 export const signOut = async () => {
+  const supabase = getSupabase();
   const { error } = await supabase.auth.signOut()
   if (error) throw error
 }

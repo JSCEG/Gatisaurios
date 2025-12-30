@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import { LoginButton } from '../components/auth/LoginButton'
-import { MagicalMap } from '../components/home/MagicalMap'
-import { useAuth } from '../hooks/useAuth'
+import { Link } from 'react-router-dom';
+import { LoginButton } from '../auth/LoginButton'
+import { MagicalMap } from '../home/MagicalMap'
+import { useAuth } from '../../hooks/useAuth'
 
 export function HomePage() {
   const { user } = useAuth()

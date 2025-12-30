@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth'
 import { useAuthStore } from '../../store/authStore'
 
@@ -12,44 +12,44 @@ export function Navbar() {
 
   const NavLinks = ({ mobile = false }) => (
     <>
-      <Link 
-        to="/" 
+      <Link
+        to="/"
         className={`text-gati-marron hover:text-gati-verde transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}
       >
         Inicio
       </Link>
-      <Link 
-        to="/coloring" 
+      <Link
+        to="/coloring"
         className={`text-gati-marron hover:text-gati-verde transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}
       >
         Colorear
       </Link>
-      <Link 
-        to="/stories" 
+      <Link
+        to="/stories"
         className={`text-gati-marron hover:text-gati-verde transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}
       >
         Cuentos
       </Link>
-      <Link 
-        to="/juegos" 
+      <Link
+        to="/juegos"
         className={`text-gati-marron hover:text-gati-verde transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}
       >
         Juegos
       </Link>
-      <Link 
-        to="/tienda" 
+      <Link
+        to="/tienda"
         className={`text-gati-marron hover:text-gati-naranja transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
         onClick={() => mobile && toggleMenu()}
       >
         Tienda
       </Link>
       {user && (
-        <Link 
-          to="/my-gallery" 
+        <Link
+          to="/my-gallery"
           className={`text-gati-marron hover:text-gati-verde transition-all duration-300 font-chewy text-2xl tracking-wide ${mobile ? 'block py-3 hover:bg-gati-bg/50 rounded-xl px-4' : 'hover:-translate-y-1'}`}
           onClick={() => mobile && toggleMenu()}
         >
@@ -64,9 +64,9 @@ export function Navbar() {
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center group">
-            <img 
-              src="/img/GatisauriosLogo.svg" 
-              alt="Gatisaurios" 
+            <img
+              src="/img/GatisauriosLogo.svg"
+              alt="Gatisaurios"
               className="h-14 w-auto transform group-hover:scale-110 transition-transform duration-300 filter drop-shadow-sm"
             />
           </Link>
@@ -80,8 +80,8 @@ export function Navbar() {
             {user ? (
               <div className="hidden md:flex items-center gap-4 pl-6 border-l-2 border-gati-marron/10">
                 <div className="flex items-center gap-3 bg-white/50 px-3 py-1.5 rounded-full border border-white/40 shadow-sm">
-                  <img 
-                    src={user.user_metadata?.avatar_url} 
+                  <img
+                    src={user.user_metadata?.avatar_url}
                     alt={user.user_metadata?.full_name}
                     className="h-9 w-9 rounded-full border-2 border-gati-naranja"
                   />
@@ -89,7 +89,7 @@ export function Navbar() {
                     {user.user_metadata?.full_name?.split(' ')[0]}
                   </span>
                 </div>
-                <button 
+                <button
                   onClick={signOut}
                   className="text-gati-marron hover:text-gati-naranja transition-colors font-chewy text-xl hover:scale-105 transform"
                 >
@@ -103,7 +103,7 @@ export function Navbar() {
             )}
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden text-gati-marron p-2 hover:bg-gati-bg/50 rounded-full transition-colors"
               onClick={toggleMenu}
             >
@@ -124,13 +124,13 @@ export function Navbar() {
             <div className="flex flex-col gap-2">
               <NavLinks mobile />
             </div>
-            
+
             <div className="mt-6 pt-6 border-t border-gati-marron/10">
               {user ? (
                 <div className="flex flex-col items-center gap-4">
                   <div className="flex items-center gap-3">
-                    <img 
-                      src={user.user_metadata?.avatar_url} 
+                    <img
+                      src={user.user_metadata?.avatar_url}
                       alt={user.user_metadata?.full_name}
                       className="h-12 w-12 rounded-full border-2 border-gati-naranja shadow-sm"
                     />
@@ -138,7 +138,7 @@ export function Navbar() {
                       {user.user_metadata?.full_name}
                     </span>
                   </div>
-                  <button 
+                  <button
                     onClick={() => { signOut(); toggleMenu(); }}
                     className="text-gati-marron font-chewy text-xl bg-gati-bg/50 w-full py-3 rounded-xl hover:bg-gati-naranja/10 transition-colors"
                   >
@@ -146,8 +146,8 @@ export function Navbar() {
                   </button>
                 </div>
               ) : (
-                <Link 
-                  to="/login" 
+                <Link
+                  to="/login"
                   className="block w-full text-center btn-primary mt-2 shadow-lg"
                   onClick={toggleMenu}
                 >

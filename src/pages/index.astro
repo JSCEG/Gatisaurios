@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import App from '../App.jsx';
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+---
+
+<Layout title="Gatisaurios">
+  <App 
+    supabaseUrl={supabaseUrl} 
+    supabaseAnonKey={supabaseAnonKey} 
+    client:only="react" 
+  />
+</Layout>

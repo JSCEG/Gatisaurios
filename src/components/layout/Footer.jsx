@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -31,13 +31,13 @@ export function Footer() {
 
       {/* Main Footer with Grass Texture/Gradient */}
       <footer className="bg-gradient-to-b from-gati-verde to-green-600 text-white pt-12 pb-8 relative z-10">
-        
+
         {/* Decoraciones de Pasto (Pseudo-elementos simulados) */}
         <div className="absolute top-0 left-0 w-full h-8 -mt-4 flex justify-around opacity-40 pointer-events-none overflow-hidden">
           {/* Pequeños 'pelitos' de pasto generados visualmente */}
           {[...Array(20)].map((_, i) => (
-            <div key={i} className="w-4 h-8 bg-gati-verde rounded-t-full transform rotate-45 origin-bottom-left" style={{ 
-              transform: `rotate(${Math.random() * 60 - 30}deg) scale(${0.8 + Math.random() * 0.5})` 
+            <div key={i} className="w-4 h-8 bg-gati-verde rounded-t-full transform rotate-45 origin-bottom-left" style={{
+              transform: `rotate(${Math.random() * 60 - 30}deg) scale(${0.8 + Math.random() * 0.5})`
             }} />
           ))}
         </div>
@@ -64,14 +64,14 @@ export function Footer() {
                 Contacto
               </Link>
             </div>
-            
+
             <div className="flex flex-col items-center md:items-end gap-2">
               <div className="flex gap-4 mb-2">
                 <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/40 transition-colors text-2xl" title="Facebook">📘</a>
                 <a href="#" className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/40 transition-colors text-2xl" title="Instagram">📸</a>
               </div>
               <p className="text-sm font-barlow opacity-90 font-medium text-center md:text-right">
-                © 2025 Gatisaurios. <br className="md:hidden"/> Hecho con 🐾 y mucho amor.
+                © 2025 Gatisaurios. <br className="md:hidden" /> Hecho con 🐾 y mucho amor.
               </p>
             </div>
           </div>
